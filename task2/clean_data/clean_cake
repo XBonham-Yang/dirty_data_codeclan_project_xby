@@ -1,0 +1,613 @@
+cake,ing_code,ingredient,measure,amount
+angel,ae,almond essence,teaspoon,0.25
+angel,bm,buttermilk,cup,NA
+angel,bp,baking powder,teaspoon,NA
+angel,br,butter,cup,NA
+angel,bs,bananas,one,NA
+angel,ca,cocoa,tablespoon,NA
+angel,cc,cottage cheese,pound,NA
+angel,ce,chocolate,ounce,NA
+angel,ci,crushed ice,cup,NA
+angel,cs,crumbs,cup,NA
+angel,ct,cream of tartar,teaspoon,1.25
+angel,dc,dried currants,tablespoon,NA
+angel,eg,eggs,one,NA
+angel,ey,egg yolk,one,NA
+angel,ew,egg white,one,10
+angel,fr,sifted flour,cup,1
+angel,gn,gelatin,tablespoon,NA
+angel,hc,heavy cream,cup,NA
+angel,lj,lemon juice,tablespoon,NA
+angel,lr,lemon rind,teaspoon,NA
+angel,mk,milk,cup,NA
+angel,ng,nutmeg,teaspoon,NA
+angel,ns,nuts,cup,NA
+angel,rm,rum,ounce,NA
+angel,sa,soda,teaspoon,NA
+angel,sc,sour cream cup,NA,NA
+angel,sg,shortening,tablespoon,NA
+angel,sr,granulated sugar,cup,1.5
+angel,ss,strawberries,quart,NA
+angel,st,salt,teaspoon,0.25
+angel,ve,vanilla extract,teaspoon,1
+angel,wr,water,cup,NA
+angel,yt,yeast,ounce,NA
+angel,zh,zwiebach,ounce,NA
+babas au rhum,ae,almond essence,teaspoon,NA
+babas au rhum,bm,buttermilk,cup,NA
+babas au rhum,bp,baking powder,teaspoon,NA
+babas au rhum,br,butter,cup,0.25
+babas au rhum,bs,bananas,one,NA
+babas au rhum,ca,cocoa,tablespoon,NA
+babas au rhum,cc,cottage cheese,pound,NA
+babas au rhum,ce,chocolate,ounce,NA
+babas au rhum,ci,crushed ice,cup,NA
+babas au rhum,cs,crumbs,cup,NA
+babas au rhum,ct,cream of tartar,teaspoon,NA
+babas au rhum,dc,dried currants,tablespoon,3
+babas au rhum,eg,eggs,one,1
+babas au rhum,ey,egg yolk,one,2
+babas au rhum,ew,egg white,one,NA
+babas au rhum,fr,sifted flour,cup,1.75
+babas au rhum,gn,gelatin,tablespoon,NA
+babas au rhum,hc,heavy cream,cup,NA
+babas au rhum,lj,lemon juice,tablespoon,NA
+babas au rhum,lr,lemon rind,teaspoon,0.5
+babas au rhum,mk,milk,cup,0.25
+babas au rhum,ng,nutmeg,teaspoon,NA
+babas au rhum,ns,nuts,cup,NA
+babas au rhum,rm,rum,ounce,2
+babas au rhum,sa,soda,teaspoon,NA
+babas au rhum,sc,sour cream cup,NA,NA
+babas au rhum,sg,shortening,tablespoon,NA
+babas au rhum,sr,granulated sugar,cup,0.25
+babas au rhum,ss,strawberries,quart,NA
+babas au rhum,st,salt,teaspoon,NA
+babas au rhum,ve,vanilla extract,teaspoon,NA
+babas au rhum,wr,water,cup,0.25
+babas au rhum,yt,yeast,ounce,0.6
+babas au rhum,zh,zwiebach,ounce,NA
+sweet chocolate,ae,almond essence,teaspoon,NA
+sweet chocolate,bm,buttermilk,cup,NA
+sweet chocolate,bp,baking powder,teaspoon,NA
+sweet chocolate,br,butter,cup,1
+sweet chocolate,bs,bananas,one,NA
+sweet chocolate,ca,cocoa,tablespoon,NA
+sweet chocolate,cc,cottage cheese,pound,NA
+sweet chocolate,ce,chocolate,ounce,4
+sweet chocolate,ci,crushed ice,cup,NA
+sweet chocolate,cs,crumbs,cup,NA
+sweet chocolate,ct,cream of tartar,teaspoon,NA
+sweet chocolate,dc,dried currants,tablespoon,NA
+sweet chocolate,eg,eggs,one,4
+sweet chocolate,ey,egg yolk,one,NA
+sweet chocolate,ew,egg white,one,NA
+sweet chocolate,fr,sifted flour,cup,2.5
+sweet chocolate,gn,gelatin,tablespoon,NA
+sweet chocolate,hc,heavy cream,cup,NA
+sweet chocolate,lj,lemon juice,tablespoon,NA
+sweet chocolate,lr,lemon rind,teaspoon,NA
+sweet chocolate,mk,milk,cup,1
+sweet chocolate,ng,nutmeg,teaspoon,NA
+sweet chocolate,ns,nuts,cup,NA
+sweet chocolate,rm,rum,ounce,NA
+sweet chocolate,sa,soda,teaspoon,1
+sweet chocolate,sc,sour cream cup,NA,NA
+sweet chocolate,sg,shortening,tablespoon,NA
+sweet chocolate,sr,granulated sugar,cup,2
+sweet chocolate,ss,strawberries,quart,NA
+sweet chocolate,st,salt,teaspoon,0.5
+sweet chocolate,ve,vanilla extract,teaspoon,1
+sweet chocolate,wr,water,cup,0.5
+sweet chocolate,yt,yeast,ounce,NA
+sweet chocolate,zh,zwiebach,ounce,NA
+buche de noel,ae,almond essence,teaspoon,NA
+buche de noel,bm,buttermilk,cup,NA
+buche de noel,bp,baking powder,teaspoon,NA
+buche de noel,br,butter,cup,NA
+buche de noel,bs,bananas,one,NA
+buche de noel,ca,cocoa,tablespoon,NA
+buche de noel,cc,cottage cheese,pound,NA
+buche de noel,ce,chocolate,ounce,NA
+buche de noel,ci,crushed ice,cup,NA
+buche de noel,cs,crumbs,cup,NA
+buche de noel,ct,cream of tartar,teaspoon,NA
+buche de noel,dc,dried currants,tablespoon,NA
+buche de noel,eg,eggs,one,4
+buche de noel,ey,egg yolk,one,NA
+buche de noel,ew,egg white,one,NA
+buche de noel,fr,sifted flour,cup,1
+buche de noel,gn,gelatin,tablespoon,NA
+buche de noel,hc,heavy cream,cup,NA
+buche de noel,lj,lemon juice,tablespoon,NA
+buche de noel,lr,lemon rind,teaspoon,NA
+buche de noel,mk,milk,cup,NA
+buche de noel,ng,nutmeg,teaspoon,NA
+buche de noel,ns,nuts,cup,NA
+buche de noel,rm,rum,ounce,NA
+buche de noel,sa,soda,teaspoon,NA
+buche de noel,sc,sour cream cup,NA,NA
+buche de noel,sg,shortening,tablespoon,NA
+buche de noel,sr,granulated sugar,cup,1.3
+buche de noel,ss,strawberries,quart,NA
+buche de noel,st,salt,teaspoon,0.5
+buche de noel,ve,vanilla extract,teaspoon,1
+buche de noel,wr,water,cup,NA
+buche de noel,yt,yeast,ounce,NA
+buche de noel,zh,zwiebach,ounce,NA
+cheesecake,ae,almond essence,teaspoon,NA
+cheesecake,bm,buttermilk,cup,NA
+cheesecake,bp,baking powder,teaspoon,NA
+cheesecake,br,butter,cup,0.25
+cheesecake,bs,bananas,one,NA
+cheesecake,ca,cocoa,tablespoon,NA
+cheesecake,cc,cottage cheese,pound,1.5
+cheesecake,ce,chocolate,ounce,NA
+cheesecake,ci,crushed ice,cup,NA
+cheesecake,cs,crumbs,cup,NA
+cheesecake,ct,cream of tartar,teaspoon,NA
+cheesecake,dc,dried currants,tablespoon,NA
+cheesecake,eg,eggs,one,6
+cheesecake,ey,egg yolk,one,NA
+cheesecake,ew,egg white,one,NA
+cheesecake,fr,sifted flour,cup,0.25
+cheesecake,gn,gelatin,tablespoon,NA
+cheesecake,hc,heavy cream,cup,NA
+cheesecake,lj,lemon juice,tablespoon,1
+cheesecake,lr,lemon rind,teaspoon,1
+cheesecake,mk,milk,cup,NA
+cheesecake,ng,nutmeg,teaspoon,NA
+cheesecake,ns,nuts,cup,NA
+cheesecake,rm,rum,ounce,NA
+cheesecake,sa,soda,teaspoon,NA
+cheesecake,sc,sour cream cup,NA,1
+cheesecake,sg,shortening,tablespoon,NA
+cheesecake,sr,granulated sugar,cup,1
+cheesecake,ss,strawberries,quart,NA
+cheesecake,st,salt,teaspoon,0.25
+cheesecake,ve,vanilla extract,teaspoon,NA
+cheesecake,wr,water,cup,NA
+cheesecake,yt,yeast,ounce,NA
+cheesecake,zh,zwiebach,ounce,6
+rum cheesecake,ae,almond essence,teaspoon,NA
+rum cheesecake,bm,buttermilk,cup,NA
+rum cheesecake,bp,baking powder,teaspoon,NA
+rum cheesecake,br,butter,cup,NA
+rum cheesecake,bs,bananas,one,NA
+rum cheesecake,ca,cocoa,tablespoon,NA
+rum cheesecake,cc,cottage cheese,pound,1.5
+rum cheesecake,ce,chocolate,ounce,NA
+rum cheesecake,ci,crushed ice,cup,NA
+rum cheesecake,cs,crumbs,cup,NA
+rum cheesecake,ct,cream of tartar,teaspoon,NA
+rum cheesecake,dc,dried currants,tablespoon,NA
+rum cheesecake,eg,eggs,one,2
+rum cheesecake,ey,egg yolk,one,NA
+rum cheesecake,ew,egg white,one,NA
+rum cheesecake,fr,sifted flour,cup,NA
+rum cheesecake,gn,gelatin,tablespoon,2
+rum cheesecake,hc,heavy cream,cup,1
+rum cheesecake,lj,lemon juice,tablespoon,1
+rum cheesecake,lr,lemon rind,teaspoon,1
+rum cheesecake,mk,milk,cup,1
+rum cheesecake,ng,nutmeg,teaspoon,NA
+rum cheesecake,ns,nuts,cup,NA
+rum cheesecake,rm,rum,ounce,1
+rum cheesecake,sa,soda,teaspoon,NA
+rum cheesecake,sc,sour cream cup,NA,NA
+rum cheesecake,sg,shortening,tablespoon,NA
+rum cheesecake,sr,granulated sugar,cup,1
+rum cheesecake,ss,strawberries,quart,NA
+rum cheesecake,st,salt,teaspoon,0.25
+rum cheesecake,ve,vanilla extract,teaspoon,NA
+rum cheesecake,wr,water,cup,NA
+rum cheesecake,yt,yeast,ounce,NA
+rum cheesecake,zh,zwiebach,ounce,NA
+blender cheesecake,ae,almond essence,teaspoon,NA
+blender cheesecake,bm,buttermilk,cup,NA
+blender cheesecake,bp,baking powder,teaspoon,NA
+blender cheesecake,br,butter,cup,NA
+blender cheesecake,bs,bananas,one,NA
+blender cheesecake,ca,cocoa,tablespoon,NA
+blender cheesecake,cc,cottage cheese,pound,0.5
+blender cheesecake,ce,chocolate,ounce,NA
+blender cheesecake,ci,crushed ice,cup,1
+blender cheesecake,cs,crumbs,cup,0.3
+blender cheesecake,ct,cream of tartar,teaspoon,NA
+blender cheesecake,dc,dried currants,tablespoon,NA
+blender cheesecake,eg,eggs,one,NA
+blender cheesecake,ey,egg yolk,one,2
+blender cheesecake,ew,egg white,one,NA
+blender cheesecake,fr,sifted flour,cup,NA
+blender cheesecake,gn,gelatin,tablespoon,1
+blender cheesecake,hc,heavy cream,cup,NA
+blender cheesecake,lj,lemon juice,tablespoon,1
+blender cheesecake,lr,lemon rind,teaspoon,1
+blender cheesecake,mk,milk,cup,NA
+blender cheesecake,ng,nutmeg,teaspoon,NA
+blender cheesecake,ns,nuts,cup,NA
+blender cheesecake,rm,rum,ounce,NA
+blender cheesecake,sa,soda,teaspoon,NA
+blender cheesecake,sc,sour cream cup,NA,1
+blender cheesecake,sg,shortening,tablespoon,NA
+blender cheesecake,sr,granulated sugar,cup,NA
+blender cheesecake,ss,strawberries,quart,NA
+blender cheesecake,st,salt,teaspoon,NA
+blender cheesecake,ve,vanilla extract,teaspoon,NA
+blender cheesecake,wr,water,cup,0.5
+blender cheesecake,yt,yeast,ounce,NA
+blender cheesecake,zh,zwiebach,ounce,NA
+one bowl chocolate,ae,almond essence,teaspoon,NA
+one bowl chocolate,bm,buttermilk,cup,NA
+one bowl chocolate,bp,baking powder,teaspoon,2
+one bowl chocolate,br,butter,cup,NA
+one bowl chocolate,bs,bananas,one,NA
+one bowl chocolate,ca,cocoa,tablespoon,10
+one bowl chocolate,cc,cottage cheese,pound,NA
+one bowl chocolate,ce,chocolate,ounce,NA
+one bowl chocolate,ci,crushed ice,cup,NA
+one bowl chocolate,cs,crumbs,cup,NA
+one bowl chocolate,ct,cream of tartar,teaspoon,NA
+one bowl chocolate,dc,dried currants,tablespoon,NA
+one bowl chocolate,eg,eggs,one,2
+one bowl chocolate,ey,egg yolk,one,NA
+one bowl chocolate,ew,egg white,one,NA
+one bowl chocolate,fr,sifted flour,cup,2
+one bowl chocolate,gn,gelatin,tablespoon,NA
+one bowl chocolate,hc,heavy cream,cup,NA
+one bowl chocolate,lj,lemon juice,tablespoon,NA
+one bowl chocolate,lr,lemon rind,teaspoon,NA
+one bowl chocolate,mk,milk,cup,0.7
+one bowl chocolate,ng,nutmeg,teaspoon,NA
+one bowl chocolate,ns,nuts,cup,NA
+one bowl chocolate,rm,rum,ounce,NA
+one bowl chocolate,sa,soda,teaspoon,0.5
+one bowl chocolate,sc,sour cream cup,NA,NA
+one bowl chocolate,sg,shortening,tablespoon,10
+one bowl chocolate,sr,granulated sugar,cup,1.5
+one bowl chocolate,ss,strawberries,quart,NA
+one bowl chocolate,st,salt,teaspoon,0.25
+one bowl chocolate,ve,vanilla extract,teaspoon,1
+one bowl chocolate,wr,water,cup,0.5
+one bowl chocolate,yt,yeast,ounce,NA
+one bowl chocolate,zh,zwiebach,ounce,NA
+red devil's food,ae,almond essence,teaspoon,NA
+red devil's food,bm,buttermilk,cup,NA
+red devil's food,bp,baking powder,teaspoon,NA
+red devil's food,br,butter,cup,NA
+red devil's food,bs,bananas,one,NA
+red devil's food,ca,cocoa,tablespoon,0.3
+red devil's food,cc,cottage cheese,pound,NA
+red devil's food,ce,chocolate,ounce,NA
+red devil's food,ci,crushed ice,cup,NA
+red devil's food,cs,crumbs,cup,NA
+red devil's food,ct,cream of tartar,teaspoon,NA
+red devil's food,dc,dried currants,tablespoon,NA
+red devil's food,eg,eggs,one,2
+red devil's food,ey,egg yolk,one,NA
+red devil's food,ew,egg white,one,NA
+red devil's food,fr,sifted flour,cup,1.75
+red devil's food,gn,gelatin,tablespoon,NA
+red devil's food,hc,heavy cream,cup,NA
+red devil's food,lj,lemon juice,tablespoon,NA
+red devil's food,lr,lemon rind,teaspoon,NA
+red devil's food,mk,milk,cup,1
+red devil's food,ng,nutmeg,teaspoon,NA
+red devil's food,ns,nuts,cup,NA
+red devil's food,rm,rum,ounce,NA
+red devil's food,sa,soda,teaspoon,1.25
+red devil's food,sc,sour cream cup,NA,NA
+red devil's food,sg,shortening,tablespoon,0.5
+red devil's food,sr,granulated sugar,cup,1.5
+red devil's food,ss,strawberries,quart,NA
+red devil's food,st,salt,teaspoon,1
+red devil's food,ve,vanilla extract,teaspoon,1
+red devil's food,wr,water,cup,NA
+red devil's food,yt,yeast,ounce,NA
+red devil's food,zh,zwiebach,ounce,NA
+sour cream fudge,ae,almond essence,teaspoon,NA
+sour cream fudge,bm,buttermilk,cup,NA
+sour cream fudge,bp,baking powder,teaspoon,NA
+sour cream fudge,br,butter,cup,NA
+sour cream fudge,bs,bananas,one,NA
+sour cream fudge,ca,cocoa,tablespoon,NA
+sour cream fudge,cc,cottage cheese,pound,NA
+sour cream fudge,ce,chocolate,ounce,3
+sour cream fudge,ci,crushed ice,cup,NA
+sour cream fudge,cs,crumbs,cup,NA
+sour cream fudge,ct,cream of tartar,teaspoon,NA
+sour cream fudge,dc,dried currants,tablespoon,NA
+sour cream fudge,eg,eggs,one,2
+sour cream fudge,ey,egg yolk,one,NA
+sour cream fudge,ew,egg white,one,NA
+sour cream fudge,fr,sifted flour,cup,2
+sour cream fudge,gn,gelatin,tablespoon,NA
+sour cream fudge,hc,heavy cream,cup,NA
+sour cream fudge,lj,lemon juice,tablespoon,NA
+sour cream fudge,lr,lemon rind,teaspoon,NA
+sour cream fudge,mk,milk,cup,NA
+sour cream fudge,ng,nutmeg,teaspoon,NA
+sour cream fudge,ns,nuts,cup,NA
+sour cream fudge,rm,rum,ounce,NA
+sour cream fudge,sa,soda,teaspoon,1
+sour cream fudge,sc,sour cream cup,NA,1
+sour cream fudge,sg,shortening,tablespoon,0.3
+sour cream fudge,sr,granulated sugar,cup,1.5
+sour cream fudge,ss,strawberries,quart,NA
+sour cream fudge,st,salt,teaspoon,1
+sour cream fudge,ve,vanilla extract,teaspoon,1
+sour cream fudge,wr,water,cup,0.25
+sour cream fudge,yt,yeast,ounce,NA
+sour cream fudge,zh,zwiebach,ounce,NA
+hungarian cream,ae,almond essence,teaspoon,1.5
+hungarian cream,bm,buttermilk,cup,NA
+hungarian cream,bp,baking powder,teaspoon,3
+hungarian cream,br,butter,cup,NA
+hungarian cream,bs,bananas,one,NA
+hungarian cream,ca,cocoa,tablespoon,NA
+hungarian cream,cc,cottage cheese,pound,NA
+hungarian cream,ce,chocolate,ounce,NA
+hungarian cream,ci,crushed ice,cup,NA
+hungarian cream,cs,crumbs,cup,NA
+hungarian cream,ct,cream of tartar,teaspoon,NA
+hungarian cream,dc,dried currants,tablespoon,NA
+hungarian cream,eg,eggs,one,3
+hungarian cream,ey,egg yolk,one,NA
+hungarian cream,ew,egg white,one,NA
+hungarian cream,fr,sifted flour,cup,3
+hungarian cream,gn,gelatin,tablespoon,NA
+hungarian cream,hc,heavy cream,cup,2
+hungarian cream,lj,lemon juice,tablespoon,NA
+hungarian cream,lr,lemon rind,teaspoon,NA
+hungarian cream,mk,milk,cup,NA
+hungarian cream,ng,nutmeg,teaspoon,NA
+hungarian cream,ns,nuts,cup,NA
+hungarian cream,rm,rum,ounce,NA
+hungarian cream,sa,soda,teaspoon,NA
+hungarian cream,sc,sour cream cup,NA,NA
+hungarian cream,sg,shortening,tablespoon,NA
+hungarian cream,sr,granulated sugar,cup,1.5
+hungarian cream,ss,strawberries,quart,NA
+hungarian cream,st,salt,teaspoon,1
+hungarian cream,ve,vanilla extract,teaspoon,2
+hungarian cream,wr,water,cup,NA
+hungarian cream,yt,yeast,ounce,NA
+hungarian cream,zh,zwiebach,ounce,NA
+crumb and nut,ae,almond essence,teaspoon,NA
+crumb and nut,bm,buttermilk,cup,NA
+crumb and nut,bp,baking powder,teaspoon,3
+crumb and nut,br,butter,cup,NA
+crumb and nut,bs,bananas,one,NA
+crumb and nut,ca,cocoa,tablespoon,NA
+crumb and nut,cc,cottage cheese,pound,NA
+crumb and nut,ce,chocolate,ounce,NA
+crumb and nut,ci,crushed ice,cup,NA
+crumb and nut,cs,crumbs,cup,3
+crumb and nut,ct,cream of tartar,teaspoon,NA
+crumb and nut,dc,dried currants,tablespoon,NA
+crumb and nut,eg,eggs,one,4
+crumb and nut,ey,egg yolk,one,NA
+crumb and nut,ew,egg white,one,NA
+crumb and nut,fr,sifted flour,cup,NA
+crumb and nut,gn,gelatin,tablespoon,NA
+crumb and nut,hc,heavy cream,cup,NA
+crumb and nut,lj,lemon juice,tablespoon,NA
+crumb and nut,lr,lemon rind,teaspoon,NA
+crumb and nut,mk,milk,cup,1
+crumb and nut,ng,nutmeg,teaspoon,NA
+crumb and nut,ns,nuts,cup,1
+crumb and nut,rm,rum,ounce,NA
+crumb and nut,sa,soda,teaspoon,NA
+crumb and nut,sc,sour cream cup,NA,NA
+crumb and nut,sg,shortening,tablespoon,1
+crumb and nut,sr,granulated sugar,cup,1
+crumb and nut,ss,strawberries,quart,NA
+crumb and nut,st,salt,teaspoon,NA
+crumb and nut,ve,vanilla extract,teaspoon,2
+crumb and nut,wr,water,cup,NA
+crumb and nut,yt,yeast,ounce,NA
+crumb and nut,zh,zwiebach,ounce,NA
+spiced pound,ae,almond essence,teaspoon,NA
+spiced pound,bm,buttermilk,cup,NA
+spiced pound,bp,baking powder,teaspoon,NA
+spiced pound,br,butter,cup,1
+spiced pound,bs,bananas,one,NA
+spiced pound,ca,cocoa,tablespoon,NA
+spiced pound,cc,cottage cheese,pound,NA
+spiced pound,ce,chocolate,ounce,NA
+spiced pound,ci,crushed ice,cup,NA
+spiced pound,cs,crumbs,cup,NA
+spiced pound,ct,cream of tartar,teaspoon,NA
+spiced pound,dc,dried currants,tablespoon,NA
+spiced pound,eg,eggs,one,5
+spiced pound,ey,egg yolk,one,NA
+spiced pound,ew,egg white,one,NA
+spiced pound,fr,sifted flour,cup,2
+spiced pound,gn,gelatin,tablespoon,NA
+spiced pound,hc,heavy cream,cup,NA
+spiced pound,lj,lemon juice,tablespoon,NA
+spiced pound,lr,lemon rind,teaspoon,NA
+spiced pound,mk,milk,cup,NA
+spiced pound,ng,nutmeg,teaspoon,1.5
+spiced pound,ns,nuts,cup,NA
+spiced pound,rm,rum,ounce,NA
+spiced pound,sa,soda,teaspoon,NA
+spiced pound,sc,sour cream cup,NA,NA
+spiced pound,sg,shortening,tablespoon,NA
+spiced pound,sr,granulated sugar,cup,1.7
+spiced pound,ss,strawberries,quart,NA
+spiced pound,st,salt,teaspoon,0.5
+spiced pound,ve,vanilla extract,teaspoon,NA
+spiced pound,wr,water,cup,NA
+spiced pound,yt,yeast,ounce,NA
+spiced pound,zh,zwiebach,ounce,NA
+strawberry roll,ae,almond essence,teaspoon,NA
+strawberry roll,bm,buttermilk,cup,NA
+strawberry roll,bp,baking powder,teaspoon,0.75
+strawberry roll,br,butter,cup,NA
+strawberry roll,bs,bananas,one,NA
+strawberry roll,ca,cocoa,tablespoon,NA
+strawberry roll,cc,cottage cheese,pound,0.5
+strawberry roll,ce,chocolate,ounce,NA
+strawberry roll,ci,crushed ice,cup,NA
+strawberry roll,cs,crumbs,cup,NA
+strawberry roll,ct,cream of tartar,teaspoon,NA
+strawberry roll,dc,dried currants,tablespoon,NA
+strawberry roll,eg,eggs,one,4
+strawberry roll,ey,egg yolk,one,NA
+strawberry roll,ew,egg white,one,NA
+strawberry roll,fr,sifted flour,cup,0.75
+strawberry roll,gn,gelatin,tablespoon,NA
+strawberry roll,hc,heavy cream,cup,NA
+strawberry roll,lj,lemon juice,tablespoon,NA
+strawberry roll,lr,lemon rind,teaspoon,NA
+strawberry roll,mk,milk,cup,NA
+strawberry roll,ng,nutmeg,teaspoon,NA
+strawberry roll,ns,nuts,cup,NA
+strawberry roll,rm,rum,ounce,NA
+strawberry roll,sa,soda,teaspoon,NA
+strawberry roll,sc,sour cream cup,NA,NA
+strawberry roll,sg,shortening,tablespoon,NA
+strawberry roll,sr,granulated sugar,cup,0.75
+strawberry roll,ss,strawberries,quart,1
+strawberry roll,st,salt,teaspoon,1
+strawberry roll,ve,vanilla extract,teaspoon,1
+strawberry roll,wr,water,cup,NA
+strawberry roll,yt,yeast,ounce,NA
+strawberry roll,zh,zwiebach,ounce,NA
+savarin,ae,almond essence,teaspoon,NA
+savarin,bm,buttermilk,cup,NA
+savarin,bp,baking powder,teaspoon,NA
+savarin,br,butter,cup,0.7
+savarin,bs,bananas,one,NA
+savarin,ca,cocoa,tablespoon,NA
+savarin,cc,cottage cheese,pound,NA
+savarin,ce,chocolate,ounce,NA
+savarin,ci,crushed ice,cup,NA
+savarin,cs,crumbs,cup,NA
+savarin,ct,cream of tartar,teaspoon,NA
+savarin,dc,dried currants,tablespoon,NA
+savarin,eg,eggs,one,3
+savarin,ey,egg yolk,one,NA
+savarin,ew,egg white,one,NA
+savarin,fr,sifted flour,cup,1.5
+savarin,gn,gelatin,tablespoon,NA
+savarin,hc,heavy cream,cup,NA
+savarin,lj,lemon juice,tablespoon,NA
+savarin,lr,lemon rind,teaspoon,1
+savarin,mk,milk,cup,0.25
+savarin,ng,nutmeg,teaspoon,NA
+savarin,ns,nuts,cup,NA
+savarin,rm,rum,ounce,NA
+savarin,sa,soda,teaspoon,NA
+savarin,sc,sour cream cup,NA,NA
+savarin,sg,shortening,tablespoon,NA
+savarin,sr,granulated sugar,cup,0.6
+savarin,ss,strawberries,quart,NA
+savarin,st,salt,teaspoon,0.5
+savarin,ve,vanilla extract,teaspoon,NA
+savarin,wr,water,cup,0.25
+savarin,yt,yeast,ounce,1
+savarin,zh,zwiebach,ounce,NA
+banana shortcake,ae,almond essence,teaspoon,NA
+banana shortcake,bm,buttermilk,cup,NA
+banana shortcake,bp,baking powder,teaspoon,4
+banana shortcake,br,butter,cup,0.6
+banana shortcake,bs,bananas,one,3
+banana shortcake,ca,cocoa,tablespoon,NA
+banana shortcake,cc,cottage cheese,pound,NA
+banana shortcake,ce,chocolate,ounce,NA
+banana shortcake,ci,crushed ice,cup,NA
+banana shortcake,cs,crumbs,cup,NA
+banana shortcake,ct,cream of tartar,teaspoon,NA
+banana shortcake,dc,dried currants,tablespoon,NA
+banana shortcake,eg,eggs,one,NA
+banana shortcake,ey,egg yolk,one,NA
+banana shortcake,ew,egg white,one,NA
+banana shortcake,fr,sifted flour,cup,3
+banana shortcake,gn,gelatin,tablespoon,NA
+banana shortcake,hc,heavy cream,cup,1
+banana shortcake,lj,lemon juice,tablespoon,NA
+banana shortcake,lr,lemon rind,teaspoon,NA
+banana shortcake,mk,milk,cup,1
+banana shortcake,ng,nutmeg,teaspoon,NA
+banana shortcake,ns,nuts,cup,NA
+banana shortcake,rm,rum,ounce,NA
+banana shortcake,sa,soda,teaspoon,NA
+banana shortcake,sc,sour cream cup,NA,NA
+banana shortcake,sg,shortening,tablespoon,NA
+banana shortcake,sr,granulated sugar,cup,0.13
+banana shortcake,ss,strawberries,quart,NA
+banana shortcake,st,salt,teaspoon,0.5
+banana shortcake,ve,vanilla extract,teaspoon,NA
+banana shortcake,wr,water,cup,NA
+banana shortcake,yt,yeast,ounce,NA
+banana shortcake,zh,zwiebach,ounce,NA
+strawberry shortcake,ae,almond essence,teaspoon,NA
+strawberry shortcake,bm,buttermilk,cup,NA
+strawberry shortcake,bp,baking powder,teaspoon,3
+strawberry shortcake,br,butter,cup,0.12
+strawberry shortcake,bs,bananas,one,NA
+strawberry shortcake,ca,cocoa,tablespoon,NA
+strawberry shortcake,cc,cottage cheese,pound,0.2
+strawberry shortcake,ce,chocolate,ounce,NA
+strawberry shortcake,ci,crushed ice,cup,NA
+strawberry shortcake,cs,crumbs,cup,NA
+strawberry shortcake,ct,cream of tartar,teaspoon,NA
+strawberry shortcake,dc,dried currants,tablespoon,NA
+strawberry shortcake,eg,eggs,one,1
+strawberry shortcake,ey,egg yolk,one,NA
+strawberry shortcake,ew,egg white,one,NA
+strawberry shortcake,fr,sifted flour,cup,2
+strawberry shortcake,gn,gelatin,tablespoon,NA
+strawberry shortcake,hc,heavy cream,cup,NA
+strawberry shortcake,lj,lemon juice,tablespoon,NA
+strawberry shortcake,lr,lemon rind,teaspoon,NA
+strawberry shortcake,mk,milk,cup,0.5
+strawberry shortcake,ng,nutmeg,teaspoon,NA
+strawberry shortcake,ns,nuts,cup,NA
+strawberry shortcake,rm,rum,ounce,NA
+strawberry shortcake,sa,soda,teaspoon,NA
+strawberry shortcake,sc,sour cream cup,NA,1
+strawberry shortcake,sg,shortening,tablespoon,NA
+strawberry shortcake,sr,granulated sugar,cup,0.6
+strawberry shortcake,ss,strawberries,quart,1
+strawberry shortcake,st,salt,teaspoon,0.75
+strawberry shortcake,ve,vanilla extract,teaspoon,NA
+strawberry shortcake,wr,water,cup,NA
+strawberry shortcake,yt,yeast,ounce,NA
+strawberry shortcake,zh,zwiebach,ounce,NA
+sponge,ae,almond essence,teaspoon,0.5
+sponge,bm,buttermilk,cup,NA
+sponge,bp,baking powder,teaspoon,1
+sponge,br,butter,cup,NA
+sponge,bs,bananas,one,NA
+sponge,ca,cocoa,tablespoon,NA
+sponge,cc,cottage cheese,pound,NA
+sponge,ce,chocolate,ounce,NA
+sponge,ci,crushed ice,cup,NA
+sponge,cs,crumbs,cup,NA
+sponge,ct,cream of tartar,teaspoon,NA
+sponge,dc,dried currants,tablespoon,NA
+sponge,eg,eggs,one,4
+sponge,ey,egg yolk,one,NA
+sponge,ew,egg white,one,NA
+sponge,fr,sifted flour,cup,0.75
+sponge,gn,gelatin,tablespoon,NA
+sponge,hc,heavy cream,cup,NA
+sponge,lj,lemon juice,tablespoon,NA
+sponge,lr,lemon rind,teaspoon,NA
+sponge,mk,milk,cup,NA
+sponge,ng,nutmeg,teaspoon,NA
+sponge,ns,nuts,cup,NA
+sponge,rm,rum,ounce,NA
+sponge,sa,soda,teaspoon,NA
+sponge,sc,sour cream cup,NA,NA
+sponge,sg,shortening,tablespoon,NA
+sponge,sr,granulated sugar,cup,0.75
+sponge,ss,strawberries,quart,NA
+sponge,st,salt,teaspoon,0.25
+sponge,ve,vanilla extract,teaspoon,NA
+sponge,wr,water,cup,2
+sponge,yt,yeast,ounce,NA
+sponge,zh,zwiebach,ounce,NA

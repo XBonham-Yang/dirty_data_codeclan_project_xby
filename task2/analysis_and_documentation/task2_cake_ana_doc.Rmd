@@ -1,0 +1,73 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+1.2.2 Analysis questions
+
+```{r}
+library(here)
+library(tidyr)
+library(tidyverse)
+```
+Which cake has the most cocoa in it?
+```{r}
+clean_cake <- read_csv(here("clean_data/clean_cake"))
+
+clean_cake %>% 
+  filter(ingredient == "cocoa") %>%
+  drop_na(amount) %>% 
+  arrange(amount, desc(amount)) %>% 
+  slice_max(amount)
+
+#Only two cakes has Cocoa, others are all NA.
+#One Bowl Chocolate has 10 tablespoons 
+```
+
+For sponge cake, how many cups of ingredients are used in total?
+```{r}
+clean_cake %>% 
+  filter(cake == "sponge", measure == "cup") %>% 
+  drop_na(amount) %>% 
+  count()
+#I don't understand what the question is asking. 
+#the code above count how many ingredients uses cup as unit 
+#the code below add up all the cups.
+clean_cake %>% 
+  filter(cake == "sponge", measure == "cup") %>% 
+  drop_na(amount) %>% 
+  summarise(sum_cup = sum(amount))
+```
+
+How many ingredients are measured in teaspoons?
+```{r}
+clean_cake %>% 
+  filter(measure == "teaspoon") %>% 
+  distinct(ingredient) %>% 
+  count()
+
+#8 ingredients use teaspoon as unit 
+```
+
+Which cake has the most unique ingredients?
+```{r}
+clean_cake %>% 
+  drop_na(amount) %>% 
+  group_by(cake) %>% 
+  summarise(num_ing = n()) %>% 
+  arrange(desc(num_ing)) %>% 
+  slice_max(num_ing)
+#babas au rhum  and one bowl chocolate have the most amount, 11.
+```
+
+Which ingredients are used only once?
+```{r}
+clean_cake %>% 
+  drop_na(amount) %>% 
+  group_by(ingredient) %>% 
+  summarise(used = n()) %>% 
+  filter(used == 1)
+
+#the following 8 ingredients are only used once
+```
+
+
