@@ -161,7 +161,9 @@ candy_all <- candy_15_s %>%
 candy_all <- candy_all %>%
  mutate(age = case_when(age >= 120 ~ NA_integer_,
                         age <= 0 ~ NA_integer_,
-                        TRUE ~ age))
+                        TRUE ~ age)) %>% 
+  select(1:7)
+  
   
 #I went back from analysis as my age was messy. 
 #I will treat age over 120 and 0 as NA.
