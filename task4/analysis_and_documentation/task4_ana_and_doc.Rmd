@@ -1,0 +1,112 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(tidyr)
+library(here)
+candy <- read_csv(here("clean_data/clean_candy"))
+```
+
+What is the total number of candy ratings given across the three years. (Number of candy ratings, not the number of raters. Don’t count missing values)
+```{r}
+candy %>% 
+  select(emotion) %>% 
+  drop_na(emotion) %>% 
+  summarise (num = n())
+ #1299017 ratings were giving out throughout the three years. 
+```
+
+What was the average age of people who are going out trick or treating?
+```{r}
+candy %>% 
+  filter(going_out == 'Yes') %>%
+  summarise(avg_age = round(mean(age, na.rm= TRUE)))
+#36?????ummmmmmmm very strange. 
+```
+
+What was the average age of people who are not going trick or treating?
+```{r}
+candy %>% 
+  filter(going_out == 'No') %>%
+  summarise(avg_age = round(mean(age, na.rm= TRUE)))
+#41 average age 
+```
+
+For each of joy, despair and meh, which candy bar received the most of these ratings?
+```{r}
+candy %>% 
+  drop_na(emotion) %>% 
+  group_by(emotion, sweets) %>% 
+  summarise(count = n()) %>% 
+  slice_max(count)
+
+#Broken glow stick is most-DESPAIR	with count 12780
+#Any full-sized candy bar is most-joy with count	12266
+#Lollipops	is most - MEH with count 4363	
+```
+
+How many people rated Starburst as despair?
+```{r}
+candy %>% 
+  filter(sweets == 'Starburst' ,
+         emotion == 'DESPAIR') %>% 
+  summarise(total_n = n())
+#2887 in total across 3 years.
+```
+
+For the next three questions, count despair as -1, joy as +1, and meh as 0.
+
+
+```{r}
+candy_rate <- candy %>% 
+  mutate(rating = case_when(emotion == 'JOY' ~ 1,
+                            emotion == 'DESPAIR' ~ -1,
+                            emotion == 'MEH' ~ 0,
+                            TRUE ~ NA_real_))
+```
+
+What was the most popular candy bar by this rating system for each gender in the dataset ?
+```{r}
+candy_rate %>% 
+  select(sweets, rating, gender) %>% 
+  drop_na(gender) %>% 
+  group_by(gender, sweets) %>% 
+  summarise(points = sum(rating, na.rm = TRUE)) %>% 
+  slice_max(points)
+
+#female- any full-sized candy bar with 2486 points,
+#I'd rather not say also full-size candy bar with 218 points
+#male the same with 4362 points
+#other the same candy with 108 points
+```
+
+What was the most popular candy bar in each year?
+```{r}
+candy_rate %>% 
+  select(timestamp, sweets, rating) %>% 
+  group_by(timestamp, sweets) %>% 
+  summarise(points = sum(rating, na.rm = TRUE)) %>% 
+  slice_max(points)
+#any full-size candy bar every year...
+#with 4603 in 2015,1037 in 2016 and 6168 in 2017.
+#it's bit strange here why it's all this candy?? 
+```
+
+What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?
+```{r}
+candy_rate %>% 
+  select(country, sweets, rating) %>% 
+  drop_na(country) %>% 
+  mutate(country = recode(country, 'US' = 'US',
+                          'UK' = 'UK',
+                          'Canada' = 'Canada',
+                          .default = 'other')) %>% 
+  group_by(country, sweets) %>% 
+  summarise(points = sum(rating, na.rm = TRUE)) %>% 
+  slice_max(points)
+#Canada/other/us the most popular candy is any full-sized candy bar with 685/160/6139
+#UK is Rolos with 96
+```
+
