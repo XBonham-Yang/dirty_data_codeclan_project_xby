@@ -15,7 +15,7 @@ candy %>%
   select(emotion) %>% 
   drop_na(emotion) %>% 
   summarise (num = n())
- #1299017 ratings were giving out throughout the three years. 
+ #772352 ratings were giving out throughout the three years. 
 ```
 
 What was the average age of people who are going out trick or treating?
@@ -23,7 +23,7 @@ What was the average age of people who are going out trick or treating?
 candy %>% 
   filter(going_out == 'Yes') %>%
   summarise(avg_age = round(mean(age, na.rm= TRUE)))
-#36?????ummmmmmmm very strange. 
+#35?????ummmmmmmm very strange. But I kept all the age between 0 to 119. 
 ```
 
 What was the average age of people who are not going trick or treating?
@@ -31,20 +31,20 @@ What was the average age of people who are not going trick or treating?
 candy %>% 
   filter(going_out == 'No') %>%
   summarise(avg_age = round(mean(age, na.rm= TRUE)))
-#41 average age 
+#39 average age 
 ```
 
 For each of joy, despair and meh, which candy bar received the most of these ratings?
 ```{r}
 candy %>% 
-  drop_na(emotion) %>% 
+  drop_na(emotion, sweets) %>% 
   group_by(emotion, sweets) %>% 
   summarise(count = n()) %>% 
   slice_max(count)
 
-#Broken glow stick is most-DESPAIR	with count 12780
-#Any full-sized candy bar is most-joy with count	12266
-#Lollipops	is most - MEH with count 4363	
+#Mary Janes is most-DESPAIR	with count 10677
+#Regular M&M is most-joy with count	11138
+#Regular M&M	is most - MEH with count 4309
 ```
 
 How many people rated Starburst as despair?
@@ -53,7 +53,7 @@ candy %>%
   filter(sweets == 'Starburst' ,
          emotion == 'DESPAIR') %>% 
   summarise(total_n = n())
-#2887 in total across 3 years.
+#1990 in total across 3 years.
 ```
 
 For the next three questions, count despair as -1, joy as +1, and meh as 0.
@@ -76,10 +76,11 @@ candy_rate %>%
   summarise(points = sum(rating, na.rm = TRUE)) %>% 
   slice_max(points)
 
-#female- any full-sized candy bar with 2486 points,
-#I'd rather not say also full-size candy bar with 218 points
-#male the same with 4362 points
-#other the same candy with 108 points
+#It's all regular M&M.. I did put all the M&M together.... 
+#2064 votes in Female,
+#176 for I'd rather not say
+#3485 for male
+#other 86
 ```
 
 What was the most popular candy bar in each year?
@@ -89,9 +90,8 @@ candy_rate %>%
   group_by(timestamp, sweets) %>% 
   summarise(points = sum(rating, na.rm = TRUE)) %>% 
   slice_max(points)
-#any full-size candy bar every year...
-#with 4603 in 2015,1037 in 2016 and 6168 in 2017.
-#it's bit strange here why it's all this candy?? 
+#any full-size candy bar for 2015 4603 votes
+#regular M&M for 2016 and 2017 with 1705 and 4150 votes
 ```
 
 What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?
@@ -106,7 +106,6 @@ candy_rate %>%
   group_by(country, sweets) %>% 
   summarise(points = sum(rating, na.rm = TRUE)) %>% 
   slice_max(points)
-#Canada/other/us the most popular candy is any full-sized candy bar with 685/160/6139
-#UK is Rolos with 96
+#M&M again..... Canada 600, other 114, UK 91 and US 4939
 ```
 

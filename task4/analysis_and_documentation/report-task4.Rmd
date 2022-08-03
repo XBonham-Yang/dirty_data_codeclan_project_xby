@@ -45,9 +45,10 @@ At this stage I picked and kept the columns that I needed.
 ```
 3- Cleaning specific columns, I worked with regx then realised how inefficient it
 was, but it does help me tidy up some countries so I kept some of the regx which
-was bit lazy of me....I created 4 lists, US, UK, Canada and NA, I looked at 
-the questions and decided that it's worthy focus on those countries. 
-after I created the lists, i recode the list to the tidy country names or NA.
+was bit lazy of me....I created lists for US, UK,Canada and some other countries
+NA..., I looked at 
+the questions and decided that it's worthy focus on UK/US/Canada. 
+after I created the lists, I recoded the list to the tidy country names or NA.
 I changed the strings to title case first, so I chanegd UAE back to all capital 
 at the end. 
 following is just to show mt method. the lists and codes are very long.
@@ -59,9 +60,7 @@ following is just to show mt method. the lists and codes are very long.
 
 #candy_16 <- candy_16 %>% 
   #mutate(country = str_to_title(country)) %>% 
-  #mutate(country = case_when(str_detect(country, '(?i)usa') ~ "US",
-                             #str_detect(country, '(?i)uk') ~"UK",
-                             #str_detect(country, '(?i)canada') ~ "Canada",
+  #mutate(country = case_when(
                              #country %in% list_uk ~ "UK",
                              #country %in% list_us ~"US",
                              #country %in% list_can ~"Canada",
@@ -77,54 +76,74 @@ I went back and changed the age to integer and I kept all age between 1 and 119.
 it's not too good as a range. 
 I also noticed that we will be working on years and I don't want to keep
 all the timestamp. so for 2015 and 2016, I changed the timestamp to the year
-and added a timestamp column to 2017. 
+and added a time stamp column to 2017. 
+I only kept the useful information
 ```{r}
+#candy_15_s <- candy_15_s %>% 
+  #mutate(age = case_when(age >= 120 ~ NA_integer_,
+                         #age <= 0 ~ NA_integer_,
+                         #TRUE ~ age))
+
 #candy_17_s <- candy_17 %>% 
   #mutate(Timestamp = "2017") %>% 
-  #mutate(age = as.integer(age))
-
-#candy_all <- candy_all %>%
- #mutate(age = case_when(age >= 120 ~ NA_integer_,
-                        #age <= 0 ~ NA_integer_,
-                        #TRUE ~ age))
+  #mutate(age = as.integer(age)) %>% 
+  #select(c(2,3,4,5,11,12,13))
+```
+I tidied the sweets columns with a similar method, I created lists of NA
+which are not sweets and put some "same" candy to one name, 
+I also decided that blue/red/green M&M are just M&M. 
+```{r}
+#candy_15_s <- candy_15_s %>%
+  #mutate(sweets = case_when(sweets %in% candy_na ~ NA_character_,
+                             #sweets %in% candy_mm ~"Regular M&M",
+                             #sweets %in% candy_mj ~ "Mary Janes",
+                            #sweets %in% candy_l ~ "Licorice",
+                            #sweets %in% candy_b ~ "Bonkers",
+                            #sweets %in% candy_st ~ 'Sweetums',
+                             #TRUE ~ sweets)) %>% 
+  #arrange(sweets)
 ```
 
 
 ```The answers to the questions presented in the task brief```
 What is the total number of candy ratings given across the three years. (Number of candy ratings, not the number of raters. Don’t count missing values)
- _1299017 ratings were giving out throughout the three years._
+  _72352 ratings were giving out throughout the three years._ 
  
 What was the average age of people who are going out trick or treating?
-_36?????ummmmmmmm very strange. I did keep a lot of "oddly old age"_
+_35?????ummmmmmmm very strange. But I kept all the age between 0 to 119._
 
 What was the average age of people who are not going trick or treating?
-_41 average age_
+_39 average age _
 
 For each of joy, despair and meh, which candy bar received the most of these ratings?
-_Broken glow stick is most-DESPAIR	with count 12780_
-_Any full-sized candy bar is most-joy with count	12266_	
-_Lollipops	is most - MEH with count 4363_	
+_Mary Janes is most-DESPAIR	with count 10677_
+_Regular M&M is most-joy with count	11138_
+_Regular M&M	is most - MEH with count 4309_
 
 How many people rated Starburst as despair?
-_2887 in total across 3 years._
+_1990 in total across 3 years._
 
 For the next three questions, count despair as -1, joy as +1, and meh as 0.
 What was the most popular candy bar by this rating system for each gender in the dataset ?
-_female- any full-sized candy bar with 2486 points_
-_I'd rather not say also full-size candy bar with 218 points_
-_male the same with 4362 points_
-_other the same candy with 108 points_
+_It's all regular M&M.. I did put all the M&M together.... _
+_2064 votes in Female,_
+_176 for I'd rather not say_
+_3485 for male_
+_other 86_
 
 What was the most popular candy bar in each year?
-_any full-size candy bar every year..._
-_with 4603 in 2015,1037 in 2016 and 6168 in 2017._
+_any full-size candy bar for 2015 4603 votes_
+_regular M&M for 2016 and 2017 with 1705 and 4150 votes_
 
 What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?
-_Canada/other/us the most popular candy is any full-sized candy bar with 685/160/6139_
-_UK is Rolos with 96_
+_All M&M again..... Canada 600, other 114, UK 91 and US 4939_
 
 ```Any other interesting analyses or conclusions you come across.```
+
 _most of the stupid name input are from the US...._
-_any full_size candy bar is oddly popular but does it even count?_ 
+
+_when I did the analysis the first time I didn't tidy the sweets names,_ 
+_the results were so different, also I imaging if I didn't put the M&M together_ 
+_it will also be very different_
 
 

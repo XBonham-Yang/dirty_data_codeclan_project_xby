@@ -1812,15 +1812,16 @@ stage I picked and kept the columns that I needed.</p>
 <!-- rnb-text-begin -->
 <p>3- Cleaning specific columns, I worked with regx then realised how
 inefficient it was, but it does help me tidy up some countries so I kept
-some of the regx which was bit lazy of me….I created 4 lists, US, UK,
-Canada and NA, I looked at the questions and decided that it’s worthy
-focus on those countries. after I created the lists, i recode the list
-to the tidy country names or NA. I changed the strings to title case
-first, so I chanegd UAE back to all capital at the end. following is
-just to show mt method. the lists and codes are very long.</p>
+some of the regx which was bit lazy of me….I created lists for US,
+UK,Canada and some other countries NA…, I looked at the questions and
+decided that it’s worthy focus on UK/US/Canada. after I created the
+lists, I recoded the list to the tidy country names or NA. I changed the
+strings to title case first, so I chanegd UAE back to all capital at the
+end. following is just to show mt method. the lists and codes are very
+long.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2xpc3RfdXMgPC0gYygnYWxsIHVzJylcbiNsaXN0X3VrIDwtIGMoJ2FsbCB1aycpXG4jbGlzdF9jYW4gPC1jKFwiYWxsIGNhbmFkYVwiKVxuI2xpc3RfTkEgPC0gYyhcIm5hXCIpXG5cbiNjYW5keV8xNiA8LSBjYW5keV8xNiAlPiUgXG4gICNtdXRhdGUoY291bnRyeSA9IHN0cl90b190aXRsZShjb3VudHJ5KSkgJT4lIFxuICAjbXV0YXRlKGNvdW50cnkgPSBjYXNlX3doZW4oc3RyX2RldGVjdChjb3VudHJ5LCAnKD9pKXVzYScpIH4gXCJVU1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjc3RyX2RldGVjdChjb3VudHJ5LCAnKD9pKXVrJykgflwiVUtcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N0cl9kZXRlY3QoY291bnRyeSwgJyg/aSljYW5hZGEnKSB+IFwiQ2FuYWRhXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF91ayB+IFwiVUtcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X3VzIH5cIlVTXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF9jYW4gflwiQ2FuYWRhXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF9OQSB+IE5BX2NoYXJhY3Rlcl8sXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ID09XCJVYWVcIiB+XCJVQUVcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI1RSVUUgfiBjb3VudHJ5KSlcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2xpc3RfdXMgPC0gYygnYWxsIHVzJylcbiNsaXN0X3VrIDwtIGMoJ2FsbCB1aycpXG4jbGlzdF9jYW4gPC1jKFwiYWxsIGNhbmFkYVwiKVxuI2xpc3RfTkEgPC0gYyhcIm5hXCIpXG5cbiNjYW5keV8xNiA8LSBjYW5keV8xNiAlPiUgXG4gICNtdXRhdGUoY291bnRyeSA9IHN0cl90b190aXRsZShjb3VudHJ5KSkgJT4lIFxuICAjbXV0YXRlKGNvdW50cnkgPSBjYXNlX3doZW4oXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF91ayB+IFwiVUtcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X3VzIH5cIlVTXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF9jYW4gflwiQ2FuYWRhXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ICVpbiUgbGlzdF9OQSB+IE5BX2NoYXJhY3Rlcl8sXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICNjb3VudHJ5ID09XCJVYWVcIiB+XCJVQUVcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI1RSVUUgfiBjb3VudHJ5KSlcblxuYGBgIn0= -->
 <pre class="r"><code>#list_us &lt;- c(&#39;all us&#39;)
 #list_uk &lt;- c(&#39;all uk&#39;)
 #list_can &lt;-c(&quot;all canada&quot;)
@@ -1828,9 +1829,7 @@ just to show mt method. the lists and codes are very long.</p>
 
 #candy_16 &lt;- candy_16 %&gt;% 
   #mutate(country = str_to_title(country)) %&gt;% 
-  #mutate(country = case_when(str_detect(country, &#39;(?i)usa&#39;) ~ &quot;US&quot;,
-                             #str_detect(country, &#39;(?i)uk&#39;) ~&quot;UK&quot;,
-                             #str_detect(country, &#39;(?i)canada&#39;) ~ &quot;Canada&quot;,
+  #mutate(country = case_when(
                              #country %in% list_uk ~ &quot;UK&quot;,
                              #country %in% list_us ~&quot;US&quot;,
                              #country %in% list_can ~&quot;Canada&quot;,
@@ -1847,57 +1846,77 @@ have checked it before. I went back and changed the age to integer and I
 kept all age between 1 and 119. it’s not too good as a range. I also
 noticed that we will be working on years and I don’t want to keep all
 the timestamp. so for 2015 and 2016, I changed the timestamp to the year
-and added a timestamp column to 2017.</p>
+and added a time stamp column to 2017. I only kept the useful
+information</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NhbmR5XzE3X3MgPC0gY2FuZHlfMTcgJT4lIFxuICAjbXV0YXRlKFRpbWVzdGFtcCA9IFwiMjAxN1wiKSAlPiUgXG4gICNtdXRhdGUoYWdlID0gYXMuaW50ZWdlcihhZ2UpKVxuXG4jY2FuZHlfYWxsIDwtIGNhbmR5X2FsbCAlPiVcbiAjbXV0YXRlKGFnZSA9IGNhc2Vfd2hlbihhZ2UgPj0gMTIwIH4gTkFfaW50ZWdlcl8sXG4gICAgICAgICAgICAgICAgICAgICAgICAjYWdlIDw9IDAgfiBOQV9pbnRlZ2VyXyxcbiAgICAgICAgICAgICAgICAgICAgICAgICNUUlVFIH4gYWdlKSlcbmBgYCJ9 -->
-<pre class="r"><code>#candy_17_s &lt;- candy_17 %&gt;% 
-  #mutate(Timestamp = &quot;2017&quot;) %&gt;% 
-  #mutate(age = as.integer(age))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NhbmR5XzE1X3MgPC0gY2FuZHlfMTVfcyAlPiUgXG4gICNtdXRhdGUoYWdlID0gY2FzZV93aGVuKGFnZSA+PSAxMjAgfiBOQV9pbnRlZ2VyXyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAjYWdlIDw9IDAgfiBOQV9pbnRlZ2VyXyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAjVFJVRSB+IGFnZSkpXG5cbiNjYW5keV8xN19zIDwtIGNhbmR5XzE3ICU+JSBcbiAgI211dGF0ZShUaW1lc3RhbXAgPSBcIjIwMTdcIikgJT4lIFxuICAjbXV0YXRlKGFnZSA9IGFzLmludGVnZXIoYWdlKSkgJT4lIFxuICAjc2VsZWN0KGMoMiwzLDQsNSwxMSwxMiwxMykpXG5gYGAifQ== -->
+<pre class="r"><code>#candy_15_s &lt;- candy_15_s %&gt;% 
+  #mutate(age = case_when(age &gt;= 120 ~ NA_integer_,
+                         #age &lt;= 0 ~ NA_integer_,
+                         #TRUE ~ age))
 
-#candy_all &lt;- candy_all %&gt;%
- #mutate(age = case_when(age &gt;= 120 ~ NA_integer_,
-                        #age &lt;= 0 ~ NA_integer_,
-                        #TRUE ~ age))</code></pre>
+#candy_17_s &lt;- candy_17 %&gt;% 
+  #mutate(Timestamp = &quot;2017&quot;) %&gt;% 
+  #mutate(age = as.integer(age)) %&gt;% 
+  #select(c(2,3,4,5,11,12,13))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>I tidied the sweets columns with a similar method, I created lists of
+NA which are not sweets and put some “same” candy to one name, I also
+decided that blue/red/green M&amp;M are just M&amp;M.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NhbmR5XzE1X3MgPC0gY2FuZHlfMTVfcyAlPiVcbiAgI211dGF0ZShzd2VldHMgPSBjYXNlX3doZW4oc3dlZXRzICVpbiUgY2FuZHlfbmEgfiBOQV9jaGFyYWN0ZXJfLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjc3dlZXRzICVpbiUgY2FuZHlfbW0gflwiUmVndWxhciBNJk1cIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N3ZWV0cyAlaW4lIGNhbmR5X21qIH4gXCJNYXJ5IEphbmVzXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N3ZWV0cyAlaW4lIGNhbmR5X2wgfiBcIkxpY29yaWNlXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N3ZWV0cyAlaW4lIGNhbmR5X2IgfiBcIkJvbmtlcnNcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAjc3dlZXRzICVpbiUgY2FuZHlfc3QgfiAnU3dlZXR1bXMnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjVFJVRSB+IHN3ZWV0cykpICU+JSBcbiAgI2FycmFuZ2Uoc3dlZXRzKVxuYGBgIn0= -->
+<pre class="r"><code>#candy_15_s &lt;- candy_15_s %&gt;%
+  #mutate(sweets = case_when(sweets %in% candy_na ~ NA_character_,
+                             #sweets %in% candy_mm ~&quot;Regular M&amp;M&quot;,
+                             #sweets %in% candy_mj ~ &quot;Mary Janes&quot;,
+                            #sweets %in% candy_l ~ &quot;Licorice&quot;,
+                            #sweets %in% candy_b ~ &quot;Bonkers&quot;,
+                            #sweets %in% candy_st ~ &#39;Sweetums&#39;,
+                             #TRUE ~ sweets)) %&gt;% 
+  #arrange(sweets)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>The answers to the questions presented in the task brief</code>
 What is the total number of candy ratings given across the three years.
 (Number of candy ratings, not the number of raters. Don’t count missing
-values) <em>1299017 ratings were giving out throughout the three
+values) <em>72352 ratings were giving out throughout the three
 years.</em></p>
 <p>What was the average age of people who are going out trick or
-treating? <em>36?????ummmmmmmm very strange. I did keep a lot of “oddly
-old age”</em></p>
+treating? <em>35?????ummmmmmmm very strange. But I kept all the age
+between 0 to 119.</em></p>
 <p>What was the average age of people who are not going trick or
-treating? <em>41 average age</em></p>
+treating? <em>39 average age </em></p>
 <p>For each of joy, despair and meh, which candy bar received the most
-of these ratings? <em>Broken glow stick is most-DESPAIR with count
-12780</em> <em>Any full-sized candy bar is most-joy with count
-12266</em><br />
-<em>Lollipops is most - MEH with count 4363</em></p>
-<p>How many people rated Starburst as despair? <em>2887 in total across
+of these ratings? <em>Mary Janes is most-DESPAIR with count 10677</em>
+<em>Regular M&amp;M is most-joy with count 11138</em> <em>Regular
+M&amp;M is most - MEH with count 4309</em></p>
+<p>How many people rated Starburst as despair? <em>1990 in total across
 3 years.</em></p>
 <p>For the next three questions, count despair as -1, joy as +1, and meh
 as 0. What was the most popular candy bar by this rating system for each
-gender in the dataset ? <em>female- any full-sized candy bar with 2486
-points</em> <em>I’d rather not say also full-size candy bar with 218
-points</em> <em>male the same with 4362 points</em> <em>other the same
-candy with 108 points</em></p>
+gender in the dataset ? <em>It’s all regular M&amp;M.. I did put all the
+M&amp;M together…. </em> <em>2064 votes in Female,</em> <em>176 for I’d
+rather not say</em> <em>3485 for male</em> <em>other 86</em></p>
 <p>What was the most popular candy bar in each year? <em>any full-size
-candy bar every year…</em> <em>with 4603 in 2015,1037 in 2016 and 6168
-in 2017.</em></p>
+candy bar for 2015 4603 votes</em> <em>regular M&amp;M for 2016 and 2017
+with 1705 and 4150 votes</em></p>
 <p>What was the most popular candy bar by this rating for people in US,
-Canada, UK, and all other countries? <em>Canada/other/us the most
-popular candy is any full-sized candy bar with 685/160/6139</em> <em>UK
-is Rolos with 96</em></p>
-<p><code>Any other interesting analyses or conclusions you come across.</code>
-<em>most of the stupid name input are from the US….</em> <em>any
-full_size candy bar is oddly popular but does it even count?</em></p>
+Canada, UK, and all other countries? <em>All M&amp;M again….. Canada
+600, other 114, UK 91 and US 4939</em></p>
+<p><code>Any other interesting analyses or conclusions you come across.</code></p>
+<p><em>most of the stupid name input are from the US….</em></p>
+<p><em>when I did the analysis the first time I didn’t tidy the sweets
+names,</em> <em>the results were so different, also I imaging if I
+didn’t put the M&amp;M together</em> <em>it will also be very
+different</em></p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGBBIGJyaWVmIGludHJvZHVjdGlvbiB0byB0aGUgZGF0YXNldGBgYApUaGlzIGRhdGEgc2V0IGlzIGFib3V0IHJhdGluZ3Mgb2YgY2FuZGllcyBmb3IgMjAxNSwyMDE2IGFuZCAyMDE3LgpJdCBhbHNvIGNvbnRhaW5zIG1hbnkgb3RoZXIgcXVlc3Rpb25zIHRoYXQgYXJlbid0IHJlbGF0ZWQgdG8gY2FuZGllcy4gCgpgYGBBIGxpc3Qgb2YgYW55IGFzc3VtcHRpb25zIHlvdSBoYXZlIG1hZGVgYGAKSSBtYWRlIG1hbnkgYXNzdW1wdGlvbnMgdGhyb3VnaHQgb3V0IHRoZSBjbGVhbmluZy4KMS1BZ2UgCkkgdG9vayBhbnl0aGluZyBncmVhdGVyIHRoYW4gMTIwIGFuZCBiZWxvdyAwIGFzIE5BLiBBbHRob3VnaCBkb2luZyB0aGlzIApkb2VzIHNlZW0gdG8gbWVzcyB1cCBteSBhbmFseXNpcy4gQXMgSSBoYXZlIGEgdmVyeSBoaWdoIGF2ZXJhZ2Ugb2YgcGVvcGxlIAp3aGVuIHdoZW4gb3V0IHRyaWNrIG9yIHRyZWF0LiAKMi1Db3VudHJ5CkkgcGlja2VkIG91dCBhbmQgY2xlYW5lZCBhbGwgdGhlIG9idmlvdXMgY291bnRyaWVzLCBpZS50eXBvIGFuZCAiSGFuZGVkLXBpY2tlZCIgYWxsIHRoZSAKc3R1cGlkIGJ1dCB3YXMgZWFzeSB0byBndWVzcyBjb3VudHJpZXMuIEFsbCB0aGUgcmVzdCBhcmUgaGFyZCB0byBndWVzcyBmb3IgaHVtYW4gc28KSSB0cmVhdGVkIHRoZW0gYXMgTkEuCjMgR2VuZXJhbCAKSSBvbmx5IGtlcHQgdGhlIGRhdGEgdGhhdCBpcyByZWxhdGVkIHRvIGNhbmRpZXMgYW5kIGtlcGUgb25seSB5ZWFyIGZyb20gdGltZXN0YW1wIApJIGFsc28gYWRkZWQgeWVhciB0byAyMDE3J3MgZGF0YS4KCmBgYFRoZSBzdGVwcyB5b3UgdG9vayB0byBjbGVhbiB0aGUgZGF0YSAoeW91IGRvbuKAmXQgbmVlZCB0byB3cml0ZSBvdXQgaW4gZGV0YWlsIGV2ZXJ5IHN0ZXAsIGJ1dCBhIGNvbWJpbmF0aW9uIG9mIGNvbW1lbnRlZCBjb2RlIGNodW5rcyB3aXRoIHN1cnJvdW5kaW5nIG92ZXJhbGwgZXhwbGFuYXRpb25zIHdvdWxkIGJlIGdyZWF0KS5gYGAKMS1Sb3VnaCBjbGVhbmluZyAKSSBuZWVkZWQgdG8gdGFrZSBhIGxvb2sgYXQgdGhlIGRhdGEgZmlyc3QsIGJ1dCBpdCB3YXMgd2F5IHRvbyBtZXNzeSB0byBldmVuCmp1c3QgaGF2ZSBhIHF1aWNrIGxvb2suIEkga25vdyB3ZSBhcmUgd29ya2luZyBvbiBzd2VldHMsIHNvIG15IGZpcnN0IHN0ZXBzIAp3ZXJlIGdldHRpbmcgYWxsIHRoZSBzd2VldHMgY29sdW1ucyB0b2dldGhlci4gCjIwMTUgYW5kIDIwMTYgaGFkIFtdIGFyb3VuZCB0aGUgbmFtZXMgc28gSSBhbHNvIHRpZGllZCB0aGF0LgpgYGB7cn0KI2NhbmR5XzE1IDwtIGNhbmR5XzE1ICU+JSAKICAjcGl2b3RfbG9uZ2VyKGNvbHMgPSBzdGFydHNfd2l0aCgiWyIpLAogICAgICAgICAgICAgI25hbWVzX3RvID0gInN3ZWV0cyIsCiAgICAgICAgICAgICAjdmFsdWVzX3RvID0gImVtb3Rpb24iKSAlPiUgCiAgI211dGF0ZShzd2VldHMgPSBzdHJfc3ViKHN3ZWV0cywgMiwgLTIpKQpgYGAKMi1BZnRlciBJIGhhZCBhIGxvb2sgYXQgdGhlIHRhYmxlcywgSSBkZWNpZGVkIHRvIGNoYW5nZSB0aGUgbmFtZXMgdG8gYSBzaG9ydGVyIApmb3JtLiBJIGRpZG4ndCBkbyBjbGVhbl9uYW1lcygpIGhlcmUgYXMgaXQgd29uJ3QgaGVscC4KQXQgdGhpcyBzdGFnZSBJIHBpY2tlZCBhbmQga2VwdCB0aGUgY29sdW1ucyB0aGF0IEkgbmVlZGVkLiAKYGBge3J9CiNjYW5keV8xNSA8LSBjYW5keV8xNSAlPiUgCiAgI3JlbmFtZShgYWdlYCA9IGBIb3cgb2xkIGFyZSB5b3U/YCwKICAgICAgICAgI2Bnb2luZ19vdXRgID0gYEFyZSB5b3UgZ29pbmcgYWN0dWFsbHkgZ29pbmcgdHJpY2sgb3IgdHJlYXRpbmcgeW91cnNlbGY/YCkKI2NhbmR5XzE1IDwtIGNhbmR5XzE1ICU+JSAKICAjc2VsZWN0KGNvbHMgPSAtYyg0OjI5KSkKYGBgCjMtIENsZWFuaW5nIHNwZWNpZmljIGNvbHVtbnMsIEkgd29ya2VkIHdpdGggcmVneCB0aGVuIHJlYWxpc2VkIGhvdyBpbmVmZmljaWVudCBpdAp3YXMsIGJ1dCBpdCBkb2VzIGhlbHAgbWUgdGlkeSB1cCBzb21lIGNvdW50cmllcyBzbyBJIGtlcHQgc29tZSBvZiB0aGUgcmVneCB3aGljaAp3YXMgYml0IGxhenkgb2YgbWUuLi4uSSBjcmVhdGVkIDQgbGlzdHMsIFVTLCBVSywgQ2FuYWRhIGFuZCBOQSwgSSBsb29rZWQgYXQgCnRoZSBxdWVzdGlvbnMgYW5kIGRlY2lkZWQgdGhhdCBpdCdzIHdvcnRoeSBmb2N1cyBvbiB0aG9zZSBjb3VudHJpZXMuIAphZnRlciBJIGNyZWF0ZWQgdGhlIGxpc3RzLCBpIHJlY29kZSB0aGUgbGlzdCB0byB0aGUgdGlkeSBjb3VudHJ5IG5hbWVzIG9yIE5BLgpJIGNoYW5nZWQgdGhlIHN0cmluZ3MgdG8gdGl0bGUgY2FzZSBmaXJzdCwgc28gSSBjaGFuZWdkIFVBRSBiYWNrIHRvIGFsbCBjYXBpdGFsIAphdCB0aGUgZW5kLiAKZm9sbG93aW5nIGlzIGp1c3QgdG8gc2hvdyBtdCBtZXRob2QuIHRoZSBsaXN0cyBhbmQgY29kZXMgYXJlIHZlcnkgbG9uZy4KYGBge3J9CiNsaXN0X3VzIDwtIGMoJ2FsbCB1cycpCiNsaXN0X3VrIDwtIGMoJ2FsbCB1aycpCiNsaXN0X2NhbiA8LWMoImFsbCBjYW5hZGEiKQojbGlzdF9OQSA8LSBjKCJuYSIpCgojY2FuZHlfMTYgPC0gY2FuZHlfMTYgJT4lIAogICNtdXRhdGUoY291bnRyeSA9IHN0cl90b190aXRsZShjb3VudHJ5KSkgJT4lIAogICNtdXRhdGUoY291bnRyeSA9IGNhc2Vfd2hlbihzdHJfZGV0ZWN0KGNvdW50cnksICcoP2kpdXNhJykgfiAiVVMiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICNzdHJfZGV0ZWN0KGNvdW50cnksICcoP2kpdWsnKSB+IlVLIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjc3RyX2RldGVjdChjb3VudHJ5LCAnKD9pKWNhbmFkYScpIH4gIkNhbmFkYSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X3VrIH4gIlVLIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjY291bnRyeSAlaW4lIGxpc3RfdXMgfiJVUyIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X2NhbiB+IkNhbmFkYSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X05BIH4gTkFfY2hhcmFjdGVyXywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjY291bnRyeSA9PSJVYWUiIH4iVUFFIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjVFJVRSB+IGNvdW50cnkpKQoKYGBgCmNsZWFuZWQgYWdlIGFuZCB5ZWFycywKSSBkaWRuJ3QgcmVhbGlzZWQgdGhhdCB0aGUgYWdlIGNvbHVtbiB3YXMgbWVzc3kgdW50aWwgSSB3b3JrZWQgb24gdGhlIApxdWVzdGlvbnMgYW5kIGdvdCBpbmYgYXMgbXkgYW5zd2VyLiBJIHNob3VsZCBoYXZlIGNoZWNrZWQgaXQgYmVmb3JlLiAKSSB3ZW50IGJhY2sgYW5kIGNoYW5nZWQgdGhlIGFnZSB0byBpbnRlZ2VyIGFuZCBJIGtlcHQgYWxsIGFnZSBiZXR3ZWVuIDEgYW5kIDExOS4KaXQncyBub3QgdG9vIGdvb2QgYXMgYSByYW5nZS4gCkkgYWxzbyBub3RpY2VkIHRoYXQgd2Ugd2lsbCBiZSB3b3JraW5nIG9uIHllYXJzIGFuZCBJIGRvbid0IHdhbnQgdG8ga2VlcAphbGwgdGhlIHRpbWVzdGFtcC4gc28gZm9yIDIwMTUgYW5kIDIwMTYsIEkgY2hhbmdlZCB0aGUgdGltZXN0YW1wIHRvIHRoZSB5ZWFyCmFuZCBhZGRlZCBhIHRpbWVzdGFtcCBjb2x1bW4gdG8gMjAxNy4gCmBgYHtyfQojY2FuZHlfMTdfcyA8LSBjYW5keV8xNyAlPiUgCiAgI211dGF0ZShUaW1lc3RhbXAgPSAiMjAxNyIpICU+JSAKICAjbXV0YXRlKGFnZSA9IGFzLmludGVnZXIoYWdlKSkKCiNjYW5keV9hbGwgPC0gY2FuZHlfYWxsICU+JQogI211dGF0ZShhZ2UgPSBjYXNlX3doZW4oYWdlID49IDEyMCB+IE5BX2ludGVnZXJfLAogICAgICAgICAgICAgICAgICAgICAgICAjYWdlIDw9IDAgfiBOQV9pbnRlZ2VyXywKICAgICAgICAgICAgICAgICAgICAgICAgI1RSVUUgfiBhZ2UpKQpgYGAKCgpgYGBUaGUgYW5zd2VycyB0byB0aGUgcXVlc3Rpb25zIHByZXNlbnRlZCBpbiB0aGUgdGFzayBicmllZmBgYApXaGF0IGlzIHRoZSB0b3RhbCBudW1iZXIgb2YgY2FuZHkgcmF0aW5ncyBnaXZlbiBhY3Jvc3MgdGhlIHRocmVlIHllYXJzLiAoTnVtYmVyIG9mIGNhbmR5IHJhdGluZ3MsIG5vdCB0aGUgbnVtYmVyIG9mIHJhdGVycy4gRG9u4oCZdCBjb3VudCBtaXNzaW5nIHZhbHVlcykKIF8xMjk5MDE3IHJhdGluZ3Mgd2VyZSBnaXZpbmcgb3V0IHRocm91Z2hvdXQgdGhlIHRocmVlIHllYXJzLl8KIApXaGF0IHdhcyB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIHdobyBhcmUgZ29pbmcgb3V0IHRyaWNrIG9yIHRyZWF0aW5nPwpfMzY/Pz8/P3VtbW1tbW1tbSB2ZXJ5IHN0cmFuZ2UuIEkgZGlkIGtlZXAgYSBsb3Qgb2YgIm9kZGx5IG9sZCBhZ2UiXwoKV2hhdCB3YXMgdGhlIGF2ZXJhZ2UgYWdlIG9mIHBlb3BsZSB3aG8gYXJlIG5vdCBnb2luZyB0cmljayBvciB0cmVhdGluZz8KXzQxIGF2ZXJhZ2UgYWdlXwoKRm9yIGVhY2ggb2Ygam95LCBkZXNwYWlyIGFuZCBtZWgsIHdoaWNoIGNhbmR5IGJhciByZWNlaXZlZCB0aGUgbW9zdCBvZiB0aGVzZSByYXRpbmdzPwpfQnJva2VuIGdsb3cgc3RpY2sgaXMgbW9zdC1ERVNQQUlSCXdpdGggY291bnQgMTI3ODBfCl9BbnkgZnVsbC1zaXplZCBjYW5keSBiYXIgaXMgbW9zdC1qb3kgd2l0aCBjb3VudAkxMjI2Nl8JCl9Mb2xsaXBvcHMJaXMgbW9zdCAtIE1FSCB3aXRoIGNvdW50IDQzNjNfCQoKSG93IG1hbnkgcGVvcGxlIHJhdGVkIFN0YXJidXJzdCBhcyBkZXNwYWlyPwpfMjg4NyBpbiB0b3RhbCBhY3Jvc3MgMyB5ZWFycy5fCgpGb3IgdGhlIG5leHQgdGhyZWUgcXVlc3Rpb25zLCBjb3VudCBkZXNwYWlyIGFzIC0xLCBqb3kgYXMgKzEsIGFuZCBtZWggYXMgMC4KV2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgc3lzdGVtIGZvciBlYWNoIGdlbmRlciBpbiB0aGUgZGF0YXNldCA/Cl9mZW1hbGUtIGFueSBmdWxsLXNpemVkIGNhbmR5IGJhciB3aXRoIDI0ODYgcG9pbnRzXwpfSSdkIHJhdGhlciBub3Qgc2F5IGFsc28gZnVsbC1zaXplIGNhbmR5IGJhciB3aXRoIDIxOCBwb2ludHNfCl9tYWxlIHRoZSBzYW1lIHdpdGggNDM2MiBwb2ludHNfCl9vdGhlciB0aGUgc2FtZSBjYW5keSB3aXRoIDEwOCBwb2ludHNfCgpXaGF0IHdhcyB0aGUgbW9zdCBwb3B1bGFyIGNhbmR5IGJhciBpbiBlYWNoIHllYXI/Cl9hbnkgZnVsbC1zaXplIGNhbmR5IGJhciBldmVyeSB5ZWFyLi4uXwpfd2l0aCA0NjAzIGluIDIwMTUsMTAzNyBpbiAyMDE2IGFuZCA2MTY4IGluIDIwMTcuXwoKV2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgZm9yIHBlb3BsZSBpbiBVUywgQ2FuYWRhLCBVSywgYW5kIGFsbCBvdGhlciBjb3VudHJpZXM/Cl9DYW5hZGEvb3RoZXIvdXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBpcyBhbnkgZnVsbC1zaXplZCBjYW5keSBiYXIgd2l0aCA2ODUvMTYwLzYxMzlfCl9VSyBpcyBSb2xvcyB3aXRoIDk2XwoKYGBgQW55IG90aGVyIGludGVyZXN0aW5nIGFuYWx5c2VzIG9yIGNvbmNsdXNpb25zIHlvdSBjb21lIGFjcm9zcy5gYGAKX21vc3Qgb2YgdGhlIHN0dXBpZCBuYW1lIGlucHV0IGFyZSBmcm9tIHRoZSBVUy4uLi5fCl9hbnkgZnVsbF9zaXplIGNhbmR5IGJhciBpcyBvZGRseSBwb3B1bGFyIGJ1dCBkb2VzIGl0IGV2ZW4gY291bnQ/XyAKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGBBIGJyaWVmIGludHJvZHVjdGlvbiB0byB0aGUgZGF0YXNldGBgYApUaGlzIGRhdGEgc2V0IGlzIGFib3V0IHJhdGluZ3Mgb2YgY2FuZGllcyBmb3IgMjAxNSwyMDE2IGFuZCAyMDE3LgpJdCBhbHNvIGNvbnRhaW5zIG1hbnkgb3RoZXIgcXVlc3Rpb25zIHRoYXQgYXJlbid0IHJlbGF0ZWQgdG8gY2FuZGllcy4gCgpgYGBBIGxpc3Qgb2YgYW55IGFzc3VtcHRpb25zIHlvdSBoYXZlIG1hZGVgYGAKSSBtYWRlIG1hbnkgYXNzdW1wdGlvbnMgdGhyb3VnaHQgb3V0IHRoZSBjbGVhbmluZy4KMS1BZ2UgCkkgdG9vayBhbnl0aGluZyBncmVhdGVyIHRoYW4gMTIwIGFuZCBiZWxvdyAwIGFzIE5BLiBBbHRob3VnaCBkb2luZyB0aGlzIApkb2VzIHNlZW0gdG8gbWVzcyB1cCBteSBhbmFseXNpcy4gQXMgSSBoYXZlIGEgdmVyeSBoaWdoIGF2ZXJhZ2Ugb2YgcGVvcGxlIAp3aGVuIHdoZW4gb3V0IHRyaWNrIG9yIHRyZWF0LiAKMi1Db3VudHJ5CkkgcGlja2VkIG91dCBhbmQgY2xlYW5lZCBhbGwgdGhlIG9idmlvdXMgY291bnRyaWVzLCBpZS50eXBvIGFuZCAiSGFuZGVkLXBpY2tlZCIgYWxsIHRoZSAKc3R1cGlkIGJ1dCB3YXMgZWFzeSB0byBndWVzcyBjb3VudHJpZXMuIEFsbCB0aGUgcmVzdCBhcmUgaGFyZCB0byBndWVzcyBmb3IgaHVtYW4gc28KSSB0cmVhdGVkIHRoZW0gYXMgTkEuCjMgR2VuZXJhbCAKSSBvbmx5IGtlcHQgdGhlIGRhdGEgdGhhdCBpcyByZWxhdGVkIHRvIGNhbmRpZXMgYW5kIGtlcGUgb25seSB5ZWFyIGZyb20gdGltZXN0YW1wIApJIGFsc28gYWRkZWQgeWVhciB0byAyMDE3J3MgZGF0YS4KCmBgYFRoZSBzdGVwcyB5b3UgdG9vayB0byBjbGVhbiB0aGUgZGF0YSAoeW91IGRvbuKAmXQgbmVlZCB0byB3cml0ZSBvdXQgaW4gZGV0YWlsIGV2ZXJ5IHN0ZXAsIGJ1dCBhIGNvbWJpbmF0aW9uIG9mIGNvbW1lbnRlZCBjb2RlIGNodW5rcyB3aXRoIHN1cnJvdW5kaW5nIG92ZXJhbGwgZXhwbGFuYXRpb25zIHdvdWxkIGJlIGdyZWF0KS5gYGAKMS1Sb3VnaCBjbGVhbmluZyAKSSBuZWVkZWQgdG8gdGFrZSBhIGxvb2sgYXQgdGhlIGRhdGEgZmlyc3QsIGJ1dCBpdCB3YXMgd2F5IHRvbyBtZXNzeSB0byBldmVuCmp1c3QgaGF2ZSBhIHF1aWNrIGxvb2suIEkga25vdyB3ZSBhcmUgd29ya2luZyBvbiBzd2VldHMsIHNvIG15IGZpcnN0IHN0ZXBzIAp3ZXJlIGdldHRpbmcgYWxsIHRoZSBzd2VldHMgY29sdW1ucyB0b2dldGhlci4gCjIwMTUgYW5kIDIwMTYgaGFkIFtdIGFyb3VuZCB0aGUgbmFtZXMgc28gSSBhbHNvIHRpZGllZCB0aGF0LgpgYGB7cn0KI2NhbmR5XzE1IDwtIGNhbmR5XzE1ICU+JSAKICAjcGl2b3RfbG9uZ2VyKGNvbHMgPSBzdGFydHNfd2l0aCgiWyIpLAogICAgICAgICAgICAgI25hbWVzX3RvID0gInN3ZWV0cyIsCiAgICAgICAgICAgICAjdmFsdWVzX3RvID0gImVtb3Rpb24iKSAlPiUgCiAgI211dGF0ZShzd2VldHMgPSBzdHJfc3ViKHN3ZWV0cywgMiwgLTIpKQpgYGAKMi1BZnRlciBJIGhhZCBhIGxvb2sgYXQgdGhlIHRhYmxlcywgSSBkZWNpZGVkIHRvIGNoYW5nZSB0aGUgbmFtZXMgdG8gYSBzaG9ydGVyIApmb3JtLiBJIGRpZG4ndCBkbyBjbGVhbl9uYW1lcygpIGhlcmUgYXMgaXQgd29uJ3QgaGVscC4KQXQgdGhpcyBzdGFnZSBJIHBpY2tlZCBhbmQga2VwdCB0aGUgY29sdW1ucyB0aGF0IEkgbmVlZGVkLiAKYGBge3J9CiNjYW5keV8xNSA8LSBjYW5keV8xNSAlPiUgCiAgI3JlbmFtZShgYWdlYCA9IGBIb3cgb2xkIGFyZSB5b3U/YCwKICAgICAgICAgI2Bnb2luZ19vdXRgID0gYEFyZSB5b3UgZ29pbmcgYWN0dWFsbHkgZ29pbmcgdHJpY2sgb3IgdHJlYXRpbmcgeW91cnNlbGY/YCkKI2NhbmR5XzE1IDwtIGNhbmR5XzE1ICU+JSAKICAjc2VsZWN0KGNvbHMgPSAtYyg0OjI5KSkKYGBgCjMtIENsZWFuaW5nIHNwZWNpZmljIGNvbHVtbnMsIEkgd29ya2VkIHdpdGggcmVneCB0aGVuIHJlYWxpc2VkIGhvdyBpbmVmZmljaWVudCBpdAp3YXMsIGJ1dCBpdCBkb2VzIGhlbHAgbWUgdGlkeSB1cCBzb21lIGNvdW50cmllcyBzbyBJIGtlcHQgc29tZSBvZiB0aGUgcmVneCB3aGljaAp3YXMgYml0IGxhenkgb2YgbWUuLi4uSSBjcmVhdGVkIGxpc3RzIGZvciBVUywgVUssQ2FuYWRhIGFuZCBzb21lIG90aGVyIGNvdW50cmllcwpOQS4uLiwgSSBsb29rZWQgYXQgCnRoZSBxdWVzdGlvbnMgYW5kIGRlY2lkZWQgdGhhdCBpdCdzIHdvcnRoeSBmb2N1cyBvbiBVSy9VUy9DYW5hZGEuIAphZnRlciBJIGNyZWF0ZWQgdGhlIGxpc3RzLCBJIHJlY29kZWQgdGhlIGxpc3QgdG8gdGhlIHRpZHkgY291bnRyeSBuYW1lcyBvciBOQS4KSSBjaGFuZ2VkIHRoZSBzdHJpbmdzIHRvIHRpdGxlIGNhc2UgZmlyc3QsIHNvIEkgY2hhbmVnZCBVQUUgYmFjayB0byBhbGwgY2FwaXRhbCAKYXQgdGhlIGVuZC4gCmZvbGxvd2luZyBpcyBqdXN0IHRvIHNob3cgbXQgbWV0aG9kLiB0aGUgbGlzdHMgYW5kIGNvZGVzIGFyZSB2ZXJ5IGxvbmcuCmBgYHtyfQojbGlzdF91cyA8LSBjKCdhbGwgdXMnKQojbGlzdF91ayA8LSBjKCdhbGwgdWsnKQojbGlzdF9jYW4gPC1jKCJhbGwgY2FuYWRhIikKI2xpc3RfTkEgPC0gYygibmEiKQoKI2NhbmR5XzE2IDwtIGNhbmR5XzE2ICU+JSAKICAjbXV0YXRlKGNvdW50cnkgPSBzdHJfdG9fdGl0bGUoY291bnRyeSkpICU+JSAKICAjbXV0YXRlKGNvdW50cnkgPSBjYXNlX3doZW4oCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X3VrIH4gIlVLIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjY291bnRyeSAlaW4lIGxpc3RfdXMgfiJVUyIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X2NhbiB+IkNhbmFkYSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI2NvdW50cnkgJWluJSBsaXN0X05BIH4gTkFfY2hhcmFjdGVyXywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjY291bnRyeSA9PSJVYWUiIH4iVUFFIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjVFJVRSB+IGNvdW50cnkpKQoKYGBgCmNsZWFuZWQgYWdlIGFuZCB5ZWFycywKSSBkaWRuJ3QgcmVhbGlzZWQgdGhhdCB0aGUgYWdlIGNvbHVtbiB3YXMgbWVzc3kgdW50aWwgSSB3b3JrZWQgb24gdGhlIApxdWVzdGlvbnMgYW5kIGdvdCBpbmYgYXMgbXkgYW5zd2VyLiBJIHNob3VsZCBoYXZlIGNoZWNrZWQgaXQgYmVmb3JlLiAKSSB3ZW50IGJhY2sgYW5kIGNoYW5nZWQgdGhlIGFnZSB0byBpbnRlZ2VyIGFuZCBJIGtlcHQgYWxsIGFnZSBiZXR3ZWVuIDEgYW5kIDExOS4KaXQncyBub3QgdG9vIGdvb2QgYXMgYSByYW5nZS4gCkkgYWxzbyBub3RpY2VkIHRoYXQgd2Ugd2lsbCBiZSB3b3JraW5nIG9uIHllYXJzIGFuZCBJIGRvbid0IHdhbnQgdG8ga2VlcAphbGwgdGhlIHRpbWVzdGFtcC4gc28gZm9yIDIwMTUgYW5kIDIwMTYsIEkgY2hhbmdlZCB0aGUgdGltZXN0YW1wIHRvIHRoZSB5ZWFyCmFuZCBhZGRlZCBhIHRpbWUgc3RhbXAgY29sdW1uIHRvIDIwMTcuIApJIG9ubHkga2VwdCB0aGUgdXNlZnVsIGluZm9ybWF0aW9uCmBgYHtyfQojY2FuZHlfMTVfcyA8LSBjYW5keV8xNV9zICU+JSAKICAjbXV0YXRlKGFnZSA9IGNhc2Vfd2hlbihhZ2UgPj0gMTIwIH4gTkFfaW50ZWdlcl8sCiAgICAgICAgICAgICAgICAgICAgICAgICAjYWdlIDw9IDAgfiBOQV9pbnRlZ2VyXywKICAgICAgICAgICAgICAgICAgICAgICAgICNUUlVFIH4gYWdlKSkKCiNjYW5keV8xN19zIDwtIGNhbmR5XzE3ICU+JSAKICAjbXV0YXRlKFRpbWVzdGFtcCA9ICIyMDE3IikgJT4lIAogICNtdXRhdGUoYWdlID0gYXMuaW50ZWdlcihhZ2UpKSAlPiUgCiAgI3NlbGVjdChjKDIsMyw0LDUsMTEsMTIsMTMpKQpgYGAKSSB0aWRpZWQgdGhlIHN3ZWV0cyBjb2x1bW5zIHdpdGggYSBzaW1pbGFyIG1ldGhvZCwgSSBjcmVhdGVkIGxpc3RzIG9mIE5BCndoaWNoIGFyZSBub3Qgc3dlZXRzIGFuZCBwdXQgc29tZSAic2FtZSIgY2FuZHkgdG8gb25lIG5hbWUsIApJIGFsc28gZGVjaWRlZCB0aGF0IGJsdWUvcmVkL2dyZWVuIE0mTSBhcmUganVzdCBNJk0uIApgYGB7cn0KI2NhbmR5XzE1X3MgPC0gY2FuZHlfMTVfcyAlPiUKICAjbXV0YXRlKHN3ZWV0cyA9IGNhc2Vfd2hlbihzd2VldHMgJWluJSBjYW5keV9uYSB+IE5BX2NoYXJhY3Rlcl8sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N3ZWV0cyAlaW4lIGNhbmR5X21tIH4iUmVndWxhciBNJk0iLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICNzd2VldHMgJWluJSBjYW5keV9taiB+ICJNYXJ5IEphbmVzIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICNzd2VldHMgJWluJSBjYW5keV9sIH4gIkxpY29yaWNlIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICNzd2VldHMgJWluJSBjYW5keV9iIH4gIkJvbmtlcnMiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgI3N3ZWV0cyAlaW4lIGNhbmR5X3N0IH4gJ1N3ZWV0dW1zJywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjVFJVRSB+IHN3ZWV0cykpICU+JSAKICAjYXJyYW5nZShzd2VldHMpCmBgYAoKCmBgYFRoZSBhbnN3ZXJzIHRvIHRoZSBxdWVzdGlvbnMgcHJlc2VudGVkIGluIHRoZSB0YXNrIGJyaWVmYGBgCldoYXQgaXMgdGhlIHRvdGFsIG51bWJlciBvZiBjYW5keSByYXRpbmdzIGdpdmVuIGFjcm9zcyB0aGUgdGhyZWUgeWVhcnMuIChOdW1iZXIgb2YgY2FuZHkgcmF0aW5ncywgbm90IHRoZSBudW1iZXIgb2YgcmF0ZXJzLiBEb27igJl0IGNvdW50IG1pc3NpbmcgdmFsdWVzKQogIF83MjM1MiByYXRpbmdzIHdlcmUgZ2l2aW5nIG91dCB0aHJvdWdob3V0IHRoZSB0aHJlZSB5ZWFycy5fIAogCldoYXQgd2FzIHRoZSBhdmVyYWdlIGFnZSBvZiBwZW9wbGUgd2hvIGFyZSBnb2luZyBvdXQgdHJpY2sgb3IgdHJlYXRpbmc/Cl8zNT8/Pz8/dW1tbW1tbW1tIHZlcnkgc3RyYW5nZS4gQnV0IEkga2VwdCBhbGwgdGhlIGFnZSBiZXR3ZWVuIDAgdG8gMTE5Ll8KCldoYXQgd2FzIHRoZSBhdmVyYWdlIGFnZSBvZiBwZW9wbGUgd2hvIGFyZSBub3QgZ29pbmcgdHJpY2sgb3IgdHJlYXRpbmc/Cl8zOSBhdmVyYWdlIGFnZSBfCgpGb3IgZWFjaCBvZiBqb3ksIGRlc3BhaXIgYW5kIG1laCwgd2hpY2ggY2FuZHkgYmFyIHJlY2VpdmVkIHRoZSBtb3N0IG9mIHRoZXNlIHJhdGluZ3M/Cl9NYXJ5IEphbmVzIGlzIG1vc3QtREVTUEFJUgl3aXRoIGNvdW50IDEwNjc3XwpfUmVndWxhciBNJk0gaXMgbW9zdC1qb3kgd2l0aCBjb3VudAkxMTEzOF8KX1JlZ3VsYXIgTSZNCWlzIG1vc3QgLSBNRUggd2l0aCBjb3VudCA0MzA5XwoKSG93IG1hbnkgcGVvcGxlIHJhdGVkIFN0YXJidXJzdCBhcyBkZXNwYWlyPwpfMTk5MCBpbiB0b3RhbCBhY3Jvc3MgMyB5ZWFycy5fCgpGb3IgdGhlIG5leHQgdGhyZWUgcXVlc3Rpb25zLCBjb3VudCBkZXNwYWlyIGFzIC0xLCBqb3kgYXMgKzEsIGFuZCBtZWggYXMgMC4KV2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgc3lzdGVtIGZvciBlYWNoIGdlbmRlciBpbiB0aGUgZGF0YXNldCA/Cl9JdCdzIGFsbCByZWd1bGFyIE0mTS4uIEkgZGlkIHB1dCBhbGwgdGhlIE0mTSB0b2dldGhlci4uLi4gXwpfMjA2NCB2b3RlcyBpbiBGZW1hbGUsXwpfMTc2IGZvciBJJ2QgcmF0aGVyIG5vdCBzYXlfCl8zNDg1IGZvciBtYWxlXwpfb3RoZXIgODZfCgpXaGF0IHdhcyB0aGUgbW9zdCBwb3B1bGFyIGNhbmR5IGJhciBpbiBlYWNoIHllYXI/Cl9hbnkgZnVsbC1zaXplIGNhbmR5IGJhciBmb3IgMjAxNSA0NjAzIHZvdGVzXwpfcmVndWxhciBNJk0gZm9yIDIwMTYgYW5kIDIwMTcgd2l0aCAxNzA1IGFuZCA0MTUwIHZvdGVzXwoKV2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgZm9yIHBlb3BsZSBpbiBVUywgQ2FuYWRhLCBVSywgYW5kIGFsbCBvdGhlciBjb3VudHJpZXM/Cl9BbGwgTSZNIGFnYWluLi4uLi4gQ2FuYWRhIDYwMCwgb3RoZXIgMTE0LCBVSyA5MSBhbmQgVVMgNDkzOV8KCmBgYEFueSBvdGhlciBpbnRlcmVzdGluZyBhbmFseXNlcyBvciBjb25jbHVzaW9ucyB5b3UgY29tZSBhY3Jvc3MuYGBgCgpfbW9zdCBvZiB0aGUgc3R1cGlkIG5hbWUgaW5wdXQgYXJlIGZyb20gdGhlIFVTLi4uLl8KCl93aGVuIEkgZGlkIHRoZSBhbmFseXNpcyB0aGUgZmlyc3QgdGltZSBJIGRpZG4ndCB0aWR5IHRoZSBzd2VldHMgbmFtZXMsXyAKX3RoZSByZXN1bHRzIHdlcmUgc28gZGlmZmVyZW50LCBhbHNvIEkgaW1hZ2luZyBpZiBJIGRpZG4ndCBwdXQgdGhlIE0mTSB0b2dldGhlcl8gCl9pdCB3aWxsIGFsc28gYmUgdmVyeSBkaWZmZXJlbnRfCgoK</div>
 
 
 
