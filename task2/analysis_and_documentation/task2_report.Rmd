@@ -1,0 +1,76 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```A brief introduction to the dataset```
+
+This data set has cake ingredients of some cakes and a table of ingredient
+codes. 
+
+```A list of any assumptions you have made```
+I kept all the NA as it is, as it's old, they might be a lot of missing value. 
+I dropped them during my analysis when it's needed.
+
+When question was not clear, I did two different answers. 
+
+
+```The steps you took to clean the data (you don’t need to write out in detail every step, but a combination of commented code chunks with surrounding overall explanations would be great).```
+I put all the ingredient code together as one column. 
+```{r}
+cake <- cake %>% 
+  pivot_longer(cols = c(2:35), 
+               names_to = "ing_code",
+               values_to = "amount")
+```
+I joined the cake table with the code table, I kept the code as well as the name 
+of the ingredients. They might be useful for different things. 
+```{r}
+cake <- cake %>% 
+  left_join(ingredient, by = c("ing_code" = "code")) %>% 
+  relocate(amount, .after = measure)
+```
+
+I cleaned the names here and put the strings to lower case.
+```{r}
+cake <- cake %>% 
+  clean_names() %>% 
+  mutate(across(where(is.character), ~str_to_lower(.x)))
+```
+
+
+```The answers to the questions presented in the task brief```
+_Which cake has the most cocoa in it?_
+#Only two cakes has Cocoa, others are all NA.
+#One Bowl Chocolate has 10 tablespoons 
+
+_For sponge cake, how many cups of ingredients are used in total?_
+#I don't understand what the question is asking. 
+#My first codes count how many ingredients uses cup as unit 
+--3 cups
+#Second codes add up all the cups.
+--3.5 cups 
+#I think the second code if more like a coding question but doesn't seem
+to make sense in real life.
+
+_How many ingredients are measured in teaspoons?_
+#8 ingredients use teaspoon as unit 
+
+_Which cake has the most unique ingredients?_
+My understanding to this question is : which cake has the highest
+amount of ingredients used. I took unique as different not special. 
+#babas au rhum  and one bowl chocolate have the most amount, 11.
+
+_Which ingredients are used only once?_
+#the following 8 ingredients are only used once
+#bananas				
+#cream of tartar				
+#crushed ice				
+#dried currants				
+#egg white				
+#nutmeg				
+#nuts				
+#zwiebach
+
+```Any other interesting analyses or conclusions you come across.```
+buche de noel	is the most simple cake to make it only needs 5 ingredients 	

@@ -65,9 +65,26 @@ clean_cake %>%
   drop_na(amount) %>% 
   group_by(ingredient) %>% 
   summarise(used = n()) %>% 
-  filter(used == 1)
+  filter(used == 1) %>% 
+  select(ingredient)
 
 #the following 8 ingredients are only used once
+#bananas				
+#cream of tartar				
+#crushed ice				
+#dried currants				
+#egg white				
+#nutmeg				
+#nuts				
+#zwiebach
 ```
 
+```{r}
+clean_cake %>% 
+  drop_na(amount) %>% 
+  group_by(cake) %>% 
+  summarise(num_ing = n()) %>% 
+  arrange(desc(num_ing)) %>% 
+  slice_min(num_ing)
+```
 
