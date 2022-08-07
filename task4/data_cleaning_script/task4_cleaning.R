@@ -212,7 +212,8 @@ candy_na <- c("Cash, or other forms of legal tender","Generic Brand Acetaminophe
               "Glow sticks", "Broken glow stick",
               "Creepy Religious comics/Chick Tracts",                                       
               "Healthy Fruit","Hugs (actual physical hugs)", "Kale smoothie",
-              "Minibags of chips", "JoyJoy (Mit Iodine)", "Pencils", 
+              "Minibags of chips", "JoyJoy (Mit Iodine)", "JoyJoy (Mit Iodine!)",
+              "Pencils", 
               "Peterson Brand Sidewalk Chalk",  "Vicodin", "White Bread", 
               "Whole Wheat anything",  
               "Person of Interest Season 3 DVD Box Set (not including Disc 4 with hilarious outtakes)",
@@ -231,7 +232,7 @@ candy_mj <- c("Mary Janes","Anonymous brown globs that come in black and orange 
 candy_l <- c("Licorice", "Licorice (yes black)")
 candy_b <- c("Bonkers", "Bonkers (the candy)" )
 candy_st <- c("Sweetums (a friend to diabetes)","Sweetums" )
-
+candy_br <- c("Box'o'Raisins","Box’o’ Raisins")
 candy_15_s <- candy_15_s %>%
   mutate(sweets = case_when(sweets %in% candy_na ~ NA_character_,
                              sweets %in% candy_mm ~"Regular M&M",
@@ -239,6 +240,7 @@ candy_15_s <- candy_15_s %>%
                             sweets %in% candy_l ~ "Licorice",
                             sweets %in% candy_b ~ "Bonkers",
                             sweets %in% candy_st ~ 'Sweetums',
+                            sweets %in% candy_br ~ "Box'o'Raisins",
                              TRUE ~ sweets)) %>% 
   arrange(sweets)
 
@@ -249,6 +251,7 @@ candy_16_s <- candy_16_s %>%
                             sweets %in% candy_l ~ "Licorice",
                             sweets %in% candy_b ~ "Bonkers",
                             sweets %in% candy_st ~ 'Sweetums',
+                            sweets %in% candy_br ~ "Box'o'Raisins",
                             TRUE ~ sweets)) 
 
 
@@ -259,6 +262,7 @@ candy_17_s <- candy_17_s %>%
                             sweets %in% candy_l ~ "Licorice",
                             sweets %in% candy_b ~ "Bonkers",
                             sweets %in% candy_st ~ 'Sweetums',
+                            sweets %in% candy_br ~ "Box'o'Raisins",
                             TRUE ~ sweets)) 
 candy_15_s %>% 
   select(sweets) %>% 
@@ -279,5 +283,5 @@ candy_all %>%
   pull()
 
 
-write_csv(candy_all, "clean_data/clean_candy")
+#write_csv(candy_all, "clean_data/clean_candy")
 

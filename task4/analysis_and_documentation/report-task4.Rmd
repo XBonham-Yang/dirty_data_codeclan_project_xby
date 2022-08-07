@@ -16,7 +16,13 @@ when when out trick or treat.
 I picked out and cleaned all the obvious countries, ie.typo and "Handed-picked" all the 
 stupid but was easy to guess countries. All the rest are hard to guess for human so
 I treated them as NA.
-3 General 
+3-Sweets
+I put all the colored M&M into regular M&M, 
+All Mary Janes(black orange warpper)as Mary Janes,
+Bonker in 2015 was sweets, I changed all the sweets Bonkers to just Bonkers
+Sweetums (a friend to diabetes) and Sweetums are same thing 
+Non-sweets were all removed.
+4-General 
 I only kept the data that is related to candies and kepe only year from timestamp 
 I also added year to 2017's data.
 
@@ -44,11 +50,8 @@ At this stage I picked and kept the columns that I needed.
   #select(cols = -c(4:29))
 ```
 3- Cleaning specific columns, I worked with regx then realised how inefficient it
-was, but it does help me tidy up some countries so I kept some of the regx which
-was bit lazy of me....I created lists for US, UK,Canada and some other countries
-NA..., I looked at 
-the questions and decided that it's worthy focus on UK/US/Canada. 
-after I created the lists, I recoded the list to the tidy country names or NA.
+was, I created lists for US, UK,Canada and some other countries
+I recoded the list to the tidy country names or NA.
 I changed the strings to title case first, so I chanegd UAE back to all capital 
 at the end. 
 following is just to show mt method. the lists and codes are very long.
