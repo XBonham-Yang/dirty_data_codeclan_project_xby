@@ -9,11 +9,10 @@ This data set has cake ingredients of some cakes and a table of ingredient
 codes. 
 
 ```A list of any assumptions you have made```
-I kept all the NA as it is, as it's old, they might be a lot of missing value. 
-I dropped them during my analysis when it's needed.
+For question 4 I assumed that it asked for the highest amount of types of 
+ingredients used in a cake.
 
-When question was not clear, I did two different answers. 
-
+Soure cream cup I assumed that it's measured in cups 
 
 ```The steps you took to clean the data (you don’t need to write out in detail every step, but a combination of commented code chunks with surrounding overall explanations would be great).```
 I put all the ingredient code together as one column. 
@@ -30,12 +29,19 @@ cake <- cake %>%
   left_join(ingredient, by = c("ing_code" = "code")) %>% 
   relocate(amount, .after = measure)
 ```
+I fixed the NA in measure, I assumed that the unit is cup. 
+```{r}
+ingredient <- ingredient %>% 
+  mutate(measure = case_when(ingredient == 'Sour cream cup' ~ 'cup',
+                            TRUE ~ measure))
+```
 
 I cleaned the names here and put the strings to lower case.
 ```{r}
 cake <- cake %>% 
   clean_names() %>% 
-  mutate(across(where(is.character), ~str_to_lower(.x)))
+  mutate(across(where(is.character), ~str_to_lower(.x))) %>% 
+  drop_na(amount)
 ```
 
 

@@ -15,7 +15,6 @@ clean_cake <- read_csv(here("clean_data/clean_cake"))
 
 clean_cake %>% 
   filter(ingredient == "cocoa") %>%
-  drop_na(amount) %>% 
   arrange(amount, desc(amount)) %>% 
   slice_max(amount)
 
@@ -27,14 +26,12 @@ For sponge cake, how many cups of ingredients are used in total?
 ```{r}
 clean_cake %>% 
   filter(cake == "sponge", measure == "cup") %>% 
-  drop_na(amount) %>% 
   count()
 #I don't understand what the question is asking. 
 #the code above count how many ingredients uses cup as unit 
 #the code below add up all the cups.
 clean_cake %>% 
   filter(cake == "sponge", measure == "cup") %>% 
-  drop_na(amount) %>% 
   summarise(sum_cup = sum(amount))
 ```
 
@@ -51,7 +48,6 @@ clean_cake %>%
 Which cake has the most unique ingredients?
 ```{r}
 clean_cake %>% 
-  drop_na(amount) %>% 
   group_by(cake) %>% 
   summarise(num_ing = n()) %>% 
   arrange(desc(num_ing)) %>% 
@@ -62,7 +58,6 @@ clean_cake %>%
 Which ingredients are used only once?
 ```{r}
 clean_cake %>% 
-  drop_na(amount) %>% 
   group_by(ingredient) %>% 
   summarise(used = n()) %>% 
   filter(used == 1) %>% 
@@ -81,7 +76,6 @@ clean_cake %>%
 
 ```{r}
 clean_cake %>% 
-  drop_na(amount) %>% 
   group_by(cake) %>% 
   summarise(num_ing = n()) %>% 
   arrange(desc(num_ing)) %>% 

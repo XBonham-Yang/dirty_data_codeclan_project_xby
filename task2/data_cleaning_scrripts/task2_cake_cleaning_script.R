@@ -12,6 +12,12 @@ cake <- cake %>%
 #put all the ingredient code in one col, getting ready to 
 #two tables 
 
+
+ingredient <- ingredient %>% 
+  mutate(measure = case_when(ingredient == 'Sour cream cup' ~ 'cup',
+                            TRUE ~ measure))
+#I went back here and changed the na to cup later. 
+
 cake <- cake %>% 
   left_join(ingredient, by = c("ing_code" = "code")) %>% 
   relocate(amount, .after = measure)
@@ -24,10 +30,11 @@ cake <- cake %>%
 
 cake <- cake %>% 
   clean_names() %>% 
-  mutate(across(where(is.character), ~str_to_lower(.x)))
+  mutate(across(where(is.character), ~str_to_lower(.x))) %>% 
+  drop_na(amount)
 #final touch, all names are now follow snake style and all 
 #character observations has lower case 
 
-write_csv(cake, "clean_data/clean_cake")
+#write_csv(cake, "clean_data/clean_cake")
 
   
